@@ -5,7 +5,7 @@ from molecule_synthesizer.views import view
 
 def synthesize_fragment():
     # fragments = input('Input fragment type with space, like "F1 F2 F12"').split()
-    fragments = ['F15', 'F23', 'F36']
+    fragments = ['F12', 'F19', 'F32']
     new_mol = chemical_reaction.load_fragment_data(fragments.pop(0))
 
     while fragments:
@@ -23,13 +23,16 @@ def create_file(fragment_data):
     bond_model = raw_data.BondData(fragment_data['name'], new_molecule=True)
     coord_model = raw_data.CoordData(fragment_data['name'], new_molecule=True)
     xyz_model = raw_data.XYZFile(fragment_data['name'], new_molecule=True)
+    pdb_model = raw_data.PDBFile(fragment_data['name'], new_molecule=True)
 
     attype_contents = contents_creator.get_attypes_contents()
     bond_contents = contents_creator.get_bond_contents()
     coord_contents = contents_creator.get_coord_contents()
     xyz_contents = contents_creator.get_xyz_file_contents()
+    pdb_contents = contents_creator.get_pdb_file_contents()
 
     attype_model.save_data(attype_contents)
     bond_model.save_data(bond_contents)
     coord_model.save_data(coord_contents)
     xyz_model.save_data(xyz_contents)
+    pdb_model.save_data(pdb_contents)

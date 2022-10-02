@@ -1,3 +1,4 @@
+import collections
 import os
 from typing import List
 from typing import Optional
@@ -72,3 +73,61 @@ class FileContentsCreator(object):
         """
         data_str = [list(map(str, l)) for l in data]
         return [' '.join(element) for element in data_str]
+
+    def get_pdb_file_contents(self) -> List[str]:
+        hetatm = self.get_pdb_hetatm_contents()
+        conect = self.get_pdb_conect_contents()
+        contents = hetatm + conect
+        contents.append('END\n')
+        contents.insert(0, 'COMPND\nCOMPND\n')
+        return contents
+
+    def get_pdb_hetatm_contents(self) -> List[str]:
+        attype = self.attypes
+        coord = self.coord
+        num_for_each_atom = collections.defaultdict(int)
+        contents = []
+        for i, atom in enumerate(attype):
+            if not atom:
+                continue
+            num_for_each_atom[atom] += 1
+            atom_index = num_for_each_atom[atom]
+            coord_of_this_atom = coord[i]
+            coord_of_this_atom = [round(i, 3) for i in coord_of_this_atom]
+
+            contents_coord_part = f'{" "*(8-len(str(coord_of_this_atom[0])))}{coord_of_this_atom[0]}' \
+                         f'{" "*(8-len(str(coord_of_this_atom[1])))}{coord_of_this_atom[1]}' \
+                         f'{" "*(8-len(str(coord_of_this_atom[2])))}{coord_of_this_atom[2]}'
+            contents_line = f'HETATM{" "*(5-len(str(i)))}{i} {atom}{atom_index}{" "*(17-len(str(atom_index)))}' \
+                            f'{contents_coord_part}  1.00  0.00{" "*11}{atom}\n'
+            contents.append(contents_line)
+        return contents
+
+    def get_pdb_conect_contents(self) -> List[str]:
+        attype = self.attypes[1:]
+        bonds = self.bond
+        element_num = len(attype)
+        contents = []
+        for target_atom in range(1, element_num):
+            data = self.create_pdb_conect_data(target_atom, bonds)
+            contents_line = f'CONECT{data}\n'
+            contents.append(contents_line)
+        return contents
+
+    def create_pdb_conect_data(self, target_atom: int, bonds: List[List[int]]) -> str:
+        atom_list_connecting_target_include_target = []
+        for bond in bonds:
+            if target_atom in bond:
+                atom_list_connecting_target_include_target += bond
+        atom_list_connecting_target = [i for i in atom_list_connecting_target_include_target if not i == target_atom]
+        contents_of_conect_part = f'{" "*(5-len(str(target_atom)))}{target_atom}'
+        for atom in atom_list_connecting_target:
+            contents_of_conect_part += f'{" "*(5-len(str(atom)))}{atom}'
+        return contents_of_conect_part
+
+
+
+
+
+
+

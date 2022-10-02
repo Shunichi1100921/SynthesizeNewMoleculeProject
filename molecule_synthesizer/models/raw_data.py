@@ -102,3 +102,10 @@ class XYZFile(FragmentDataModel):
         frag_num = self.fragment_type[1:]
         file_path = os.path.join(self.data_dir_path, f'F{frag_num}.xyz')
         return file_path
+
+
+class PDBFile(FragmentDataModel):
+    def get_file_path(self):
+        frag_type = self.fragment_type
+        file_path = os.path.join(self.data_dir_path, f'{frag_type}.pdb')
+        return file_path
