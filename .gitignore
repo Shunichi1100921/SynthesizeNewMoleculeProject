@@ -131,3 +131,5 @@ dmypy.json
 # Others
 tests/
 .DS_Store
+/Data/new_molecule_02Oct_2022.zip
+/Data/new_molecule_25Sep_2022.zip

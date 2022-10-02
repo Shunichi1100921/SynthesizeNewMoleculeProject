@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13b073ab-3bf6-4067-98cc-7b7e2e05e13c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__main__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molecule_synthesizer/controller/synthesis_multi_fragment.py" beforeDir="false" afterPath="$PROJECT_DIR$/molecule_synthesizer/controller/synthesis_multi_fragment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molecule_synthesizer/models/raw_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/molecule_synthesizer/models/raw_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molecule_synthesizer/views/view.py" beforeDir="false" afterPath="$PROJECT_DIR$/molecule_synthesizer/views/view.py" afterDir="false" />
+    <list default="true" id="13b073ab-3bf6-4067-98cc-7b7e2e05e13c" name="Changes" comment="upload pdb file">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,8 +214,23 @@
       <workItem from="1663412250337" duration="9868000" />
       <workItem from="1663553250599" duration="2984000" />
       <workItem from="1663979592195" duration="23206000" />
-      <workItem from="1664618629144" duration="7990000" />
+      <workItem from="1664618629144" duration="8566000" />
     </task>
+    <task id="LOCAL-00001" summary="create pdb file">
+      <created>1664711395673</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1664711395673</updated>
+    </task>
+    <task id="LOCAL-00002" summary="upload pdb file">
+      <created>1664711620331</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664711620331</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,6 +246,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="create pdb file" />
+    <MESSAGE value="upload pdb file" />
+    <option name="LAST_COMMIT_MESSAGE" value="upload pdb file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
