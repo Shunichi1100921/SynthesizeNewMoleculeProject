@@ -5,7 +5,7 @@ from molecule_synthesizer.views import view
 
 def synthesize_fragment():
     # fragments = input('Input fragment type with space, like "F1 F2 F12"').split()
-    fragments = ['F12', 'F19', 'F32']
+    fragments = ['F6', 'F13', 'F25']
     new_mol = chemical_reaction.load_fragment_data(fragments.pop(0))
 
     while fragments:
@@ -17,20 +17,24 @@ def synthesize_fragment():
     create_file(new_mol)
     return new_mol
 
-def create_file(fragment_data):
-    contents_creator = view.FileContentsCreator(fragment_data)
-    attype_model = raw_data.AttypeData(fragment_data['name'], new_molecule=True)
-    bond_model = raw_data.BondData(fragment_data['name'], new_molecule=True)
-    coord_model = raw_data.CoordData(fragment_data['name'], new_molecule=True)
-    xyz_model = raw_data.XYZFile(fragment_data['name'], new_molecule=True)
-    pdb_model = raw_data.PDBFile(fragment_data['name'], new_molecule=True)
 
+def create_file(fragment_data):
+    # contentの作成
+    contents_creator = view.FileContentsCreator(fragment_data)
     attype_contents = contents_creator.get_attypes_contents()
     bond_contents = contents_creator.get_bond_contents()
     coord_contents = contents_creator.get_coord_contents()
     xyz_contents = contents_creator.get_xyz_file_contents()
     pdb_contents = contents_creator.get_pdb_file_contents()
 
+    # Data Modelのインスタンス化の作成
+    attype_model = raw_data.AttypeData(fragment_data['name'], new_molecule=True)
+    bond_model = raw_data.BondData(fragment_data['name'], new_molecule=True)
+    coord_model = raw_data.CoordData(fragment_data['name'], new_molecule=True)
+    xyz_model = raw_data.XYZFile(fragment_data['name'], new_molecule=True)
+    pdb_model = raw_data.PDBFile(fragment_data['name'], new_molecule=True)
+
+    # DataのSave
     attype_model.save_data(attype_contents)
     bond_model.save_data(bond_contents)
     coord_model.save_data(coord_contents)

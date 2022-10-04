@@ -19,6 +19,13 @@ def load_fragment_data(fragment):
 
 def remove_hydrogen(fragment_data):
     """Remove Hydrogen which is seemed to be added.
+    Process:
+        1st: Remove a bond with hydrogen which is long and seemed to be added from bond data.
+        2nd: Remove a hydrogen data from attypes data.
+        3rd: Arrange bond index of bond data.
+        4th: Remove a coord data of removed hydrogen from coord data.
+        5th: Arrange a bond index of free-atom data.
+
     :param fragment_data: dict: fragment name such as 'F1', 'F2', ..., 'F57'.
     :return: new_fragment_data(dict): Edited fragment data that shows attypes, bond, long bond, free atom, and coord.
     """
@@ -40,7 +47,15 @@ def remove_hydrogen(fragment_data):
 
 
 def synthesize_two_fragment(fragment1_data, fragment2_data):
-    """Synthesize fragment1 and fragment2, which have at least one free atoms for each fragment.
+    """Synthesize fragment1 and fragment2 data, which have one free atoms for each fragment.
+    Each Molecule data have
+        'name'(str),
+        'attypes'(List[str]),
+        'bond'(List[List[int]]),
+        'long_bond'(List[List[int]]),
+        'coord'(List[List[float]]),
+        'free_atom'(List[int]).
+
     :param fragment1_data: Fragment1 Data comprise attypes, bond, coord, and free_atom.
     :param fragment2_data: Fragment2 Data comprise attypes, bond, coord, and free_atom.
     :return: new_mol_data(dict): New molecule data comprise attypes, bond, coord.
