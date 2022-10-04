@@ -2,10 +2,24 @@ from molecule_synthesizer.controller import chemical_reaction
 from molecule_synthesizer.models import raw_data
 from molecule_synthesizer.views import view
 
+def synthesize_multiple_molecules() -> None:
+    fragments_list = [
+        ['F1', 'F2'],
+        ['F1', 'F2', 'F10'],
+        ['F3', 'F5', 'F14'],
+        ['F6', 'F13', 'F25'],
+        ['F12', 'F19', 'F32'],
+        ['F15', 'F23', 'F36'],
+    ]
 
-def synthesize_fragment():
+    for fragments in fragments_list:
+        synthesize_fragment(fragments)
+
+    return None
+
+
+def synthesize_fragment(fragments):
     # fragments = input('Input fragment type with space, like "F1 F2 F12"').split()
-    fragments = ['F6', 'F13', 'F25']
     new_mol = chemical_reaction.load_fragment_data(fragments.pop(0))
 
     while fragments:

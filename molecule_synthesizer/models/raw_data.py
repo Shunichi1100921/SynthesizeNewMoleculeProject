@@ -53,10 +53,11 @@ class AttypeData(FragmentDataModel):
         return file_path
 
     def load_data(self):
+
         with open(self.file_path, 'r') as f:
             contents = f.readlines()
 
-        contents = [atom[0].upper() for atom in contents]
+        contents = [atom.split('_')[0] for atom in contents]
         contents.insert(0, '')
         return contents
 
