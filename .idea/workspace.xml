@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="13b073ab-3bf6-4067-98cc-7b7e2e05e13c" name="Changes" comment="edit gitignore file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__main__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molecule_synthesizer/controller/synthesis_multi_fragment.py" beforeDir="false" afterPath="$PROJECT_DIR$/molecule_synthesizer/controller/synthesis_multi_fragment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/molecule_synthesizer/models/raw_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/molecule_synthesizer/models/raw_data.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +215,7 @@
       <workItem from="1663553250599" duration="2984000" />
       <workItem from="1663979592195" duration="23206000" />
       <workItem from="1664618629144" duration="8596000" />
-      <workItem from="1664859318560" duration="2635000" />
+      <workItem from="1664859318560" duration="3229000" />
     </task>
     <task id="LOCAL-00001" summary="create pdb file">
       <created>1664711395673</created>
