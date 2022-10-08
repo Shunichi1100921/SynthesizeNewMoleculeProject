@@ -4,13 +4,18 @@ Each molecule is composed of six fragments.  They are a modifier group, Benzothi
 
 I classified fragments into six based on bioisoster.
 
+## Modifier group
 Modifier group is usually a halogen, but may also be a hydrocarbon group.
 
-Benzothiaole ring may be only F4.
+## Benzothiazole group
+Fragment including Benzothiazole part.
 
+## Amide group
 Amide group are the fragments with primary, secondary, or tertiary amide.
 
-Aryl groups are benzene or similar, like thiophene, pyridine, and so on.
+## Aryl group
+Aryl groups are benzene or similar, like thiophene or  pyridine.
 
-Ethers are ethers or equivalent, like sulfur, dinitrile, and so on.  Ethers can be modifier group.
+## Alcohol group
+Alcohol are alcohol or bioisoster of them, like amine.
 
