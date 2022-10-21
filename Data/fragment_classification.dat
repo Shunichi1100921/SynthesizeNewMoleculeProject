@@ -1,4 +1,4 @@
-# Modifier groups.
+# Modifier
 F3
 F6
 F12
@@ -18,13 +18,13 @@ F42
 F43
 F50
 
-# Benzothiazole ring
+# Benzothiazole
 F4
 F15
 F49
 F53
 
-# Amide groups and bioisoster of them.
+# Amide
 F1
 F7
 F8
@@ -40,14 +40,14 @@ F46
 F48
 F52
 
-# Aryl groups and bioisoster of them.
+# Aryl
 F5
 F10
 F26
 F44
 F49
 
-# Alcohol and bioisoster of them.
+# Alcohol/Amine
 F2
 F9
 F11

@@ -2,759 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13b073ab-3bf6-4067-98cc-7b7e2e05e13c" name="Changes" comment="edit gitignore file">
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F1/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F1/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F1/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F1/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F1/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F1/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F1/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F10/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F10/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F10/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F10/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F10/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F10/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F10/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F11/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F11/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F11/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F11/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F11/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F11/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F11/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F12/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F12/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F12/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F12/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F12/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F12/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F12/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F13/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F13/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F13/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F13/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F13/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F13/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F13/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F14/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F14/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F14/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F14/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F14/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F14/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F14/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F15/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F15/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F15/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F15/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F15/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F15/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F15/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F16/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F16/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F16/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F16/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F16/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F16/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F16/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F17/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F17/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F17/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F17/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F17/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F17/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F17/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F18/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F18/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F18/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F18/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F18/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F18/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F18/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F19/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F19/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F19/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F19/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F19/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F19/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F19/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F2/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F2/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F2/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F2/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F2/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F2/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F2/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F20/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F20/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F20/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F20/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F20/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F20/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F20/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F21/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F21/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F21/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F21/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F21/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F21/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F21/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F22/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F22/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F22/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F22/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F22/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F22/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F22/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F23/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F23/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F23/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F23/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F23/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F23/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F23/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F24/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F24/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F24/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F24/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F24/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F24/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F24/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F25/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F25/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F25/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F25/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F25/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F25/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F25/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F26/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F26/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F26/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F26/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F26/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F26/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F26/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F27/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F27/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F27/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F27/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F27/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F27/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F27/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F28/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F28/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F28/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F28/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F28/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F28/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F28/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F29/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F29/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F29/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F29/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F29/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F29/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F29/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F3/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F3/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F3/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F3/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F3/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F3/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F3/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F30/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F30/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F30/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F30/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F30/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F30/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F30/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F31/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F31/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F31/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F31/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F31/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F31/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F31/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F32/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F32/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F32/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F32/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F32/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F32/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F32/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F33/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F33/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F33/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F33/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F33/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F33/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F33/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F34/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F34/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F34/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F34/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F34/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F34/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F34/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F35/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F35/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F35/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F35/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F35/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F35/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F35/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F36/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F36/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F36/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F36/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F36/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F36/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F36/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F38/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F38/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F38/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F38/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F38/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F38/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F38/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F39/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F39/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F39/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F39/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F39/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F39/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F39/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F4/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F4/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F4/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F4/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F4/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F4/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F4/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F40/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F40/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F40/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F40/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F40/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F40/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F40/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F42/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F42/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F42/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F42/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F42/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F42/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F42/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F43/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F43/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F43/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F43/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F43/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F43/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F43/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F44/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F44/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F44/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F44/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F44/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F44/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F44/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F45/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F45/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F45/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F45/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F45/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F45/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F45/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F46/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F46/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F46/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F46/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F46/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F46/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F46/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F48/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F48/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F48/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F48/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F48/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F48/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F48/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F49/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F49/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F49/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F49/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F49/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F49/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F49/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F5/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F5/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F5/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F5/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F5/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F5/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F5/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F50/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F50/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F50/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F50/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F50/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F50/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F50/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F51/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F51/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F51/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F51/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F51/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F51/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F51/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F52/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F52/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F52/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F52/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F52/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F52/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F52/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F53/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F53/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F53/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F53/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F53/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F53/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F53/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F54/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F54/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F54/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F54/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F54/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F54/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F54/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F55/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F55/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F55/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F55/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F55/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F55/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F55/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F56/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F56/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F56/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F56/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F56/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F56/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F56/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F57/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F57/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F57/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F57/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F57/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F57/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F57/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F6/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F6/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F6/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F6/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F6/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F6/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F6/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F7/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F7/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F7/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F7/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F7/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F8/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F8/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F8/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F8/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F8/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F8/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F8/log.lammps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F9/attypes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F9/coord.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F9/elem.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F9/frag5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F9/frag5.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F9/fragid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F9/log.lammps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F1/bind_fragment.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F13/bind_fragment.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F2/bind_fragment.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F25/bind_fragment.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F4/bind_fragment.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F5/bind_fragment.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/molecule_synthesizer/models/fragment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/13_synthesize_new_molecule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/13_synthesize_new_molecule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F1/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F1/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F1/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F1/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F1/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F1/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F1/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F10/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F10/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F10/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F10/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F10/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F10/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F10/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F11/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F11/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F11/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F11/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F11/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F11/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F11/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F12/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F12/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F12/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F12/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F12/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F12/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F12/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F13/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F13/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F13/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F13/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F13/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F13/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F13/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F14/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F14/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F14/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F14/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F14/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F14/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F14/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F15/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F15/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F15/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F15/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F15/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F15/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F15/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F16/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F16/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F16/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F16/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F16/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F16/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F16/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F17/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F17/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F17/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F17/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F17/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F17/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F17/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F18/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F18/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F18/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F18/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F18/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F18/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F18/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F19/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F19/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F19/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F19/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F19/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F19/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F19/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F2/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F2/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F2/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F2/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F2/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F2/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F2/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F20/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F20/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F20/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F20/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F20/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F20/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F20/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F21/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F21/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F21/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F21/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F21/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F21/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F21/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F22/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F22/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F22/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F22/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F22/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F22/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F22/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F23/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F23/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F23/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F23/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F23/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F23/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F23/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F24/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F24/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F24/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F24/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F24/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F24/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F24/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F25/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F25/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F25/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F25/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F25/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F25/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F25/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F26/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F26/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F26/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F26/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F26/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F26/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F26/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F27/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F27/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F27/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F27/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F27/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F27/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F27/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F28/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F28/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F28/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F28/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F28/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F28/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F28/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F29/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F29/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F29/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F29/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F29/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F29/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F29/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F3/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F3/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F3/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F3/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F3/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F3/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F3/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F30/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F30/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F30/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F30/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F30/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F30/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F30/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F31/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F31/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F31/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F31/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F31/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F31/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F31/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F32/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F32/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F32/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F32/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F32/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F32/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F32/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F33/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F33/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F33/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F33/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F33/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F33/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F33/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F34/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F34/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F34/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F34/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F34/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F34/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F34/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F35/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F35/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F35/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F35/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F35/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F35/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F35/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F36/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F36/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F36/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F36/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F36/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F36/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F36/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F38/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F38/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F38/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F38/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F38/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F38/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F38/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F39/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F39/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F39/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F39/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F39/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F39/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F39/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F4/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F4/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F4/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F4/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F4/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F4/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F4/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F40/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F40/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F40/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F40/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F40/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F40/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F40/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F42/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F42/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F42/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F42/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F42/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F42/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F42/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F43/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F43/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F43/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F43/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F43/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F43/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F43/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F44/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F44/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F44/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F44/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F44/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F44/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F44/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F45/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F45/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F45/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F45/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F45/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F45/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F45/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F46/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F46/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F46/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F46/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F46/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F46/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F46/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F48/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F48/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F48/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F48/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F48/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F48/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F48/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F49/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F49/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F49/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F49/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F49/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F49/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F49/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F5/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F5/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F5/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F5/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F5/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F5/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F5/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F50/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F50/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F50/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F50/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F50/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F50/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F50/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F51/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F51/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F51/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F51/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F51/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F51/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F51/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F52/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F52/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F52/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F52/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F52/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F52/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F52/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F53/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F53/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F53/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F53/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F53/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F53/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F53/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F54/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F54/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F54/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F54/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F54/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F54/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F54/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F55/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F55/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F55/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F55/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F55/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F55/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F55/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F56/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F56/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F56/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F56/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F56/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F56/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F56/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F57/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F57/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F57/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F57/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F57/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F57/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F57/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F6/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F6/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F6/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F6/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F6/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F6/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F6/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F7/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F7/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F7/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F7/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F7/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F8/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F8/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F8/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F8/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F8/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F8/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F8/.log.lammps.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F9/.attypes.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F9/.coord.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F9/.elem.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F9/.frag5.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F9/.frag5.in.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F9/.fragid.dat.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/fragment_data_for_shape_25Aug_2022/F9/.log.lammps.icloud" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/fragment_classification.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Data/fragment_classification.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/molecule_synthesizer/controller/chemical_reaction.py" beforeDir="false" afterPath="$PROJECT_DIR$/molecule_synthesizer/controller/chemical_reaction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/molecule_synthesizer/controller/synthesis_multi_fragment.py" beforeDir="false" afterPath="$PROJECT_DIR$/molecule_synthesizer/controller/synthesis_multi_fragment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/molecule_synthesizer/models/chemical_synthesis.py" beforeDir="false" afterPath="$PROJECT_DIR$/molecule_synthesizer/models/chemical_synthesis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/molecule_synthesizer/models/raw_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/molecule_synthesizer/models/fragment_data.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -775,19 +37,22 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2EFpeeWhMiKtOMStM1Q92jagPUC" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/shunichi/Library/Mobile Documents/com~apple~CloudDocs/Documents/50_cardiomyocite : machine learning project in iCeMS/13_synthesize_new_molecule",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/shunichi/Library/Mobile Documents/com~apple~CloudDocs/Documents/50_cardiomyocite : machine learning project in iCeMS/13_synthesize_new_molecule&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/molecule_synthesizer/models" />
@@ -795,7 +60,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python tests.pytest in /raw_data">
     <configuration name="__main__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="13_make_new_molecule" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -933,11 +198,29 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest in /raw_data" type="tests" factoryName="py.test">
+      <module name="13_synthesize_new_molecule" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="$USER_HOME$/opt/anaconda3/envs/13_synthesize_new_molecule/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_fragment_data.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.main" />
       <item itemvalue="Python.__main__" />
       <item itemvalue="Python.chemical_synthesis" />
       <item itemvalue="Python.data_processing" />
+      <item itemvalue="Python tests.pytest in /raw_data" />
       <item itemvalue="Python tests.pytest in / test_remove_hydrogen" />
       <item itemvalue="Python tests.pytest in / test_chemical_synthesis" />
       <item itemvalue="Python tests.Python tests for test_chemical_synthesis.TestSynthesis.test_synthesize_attypes_data" />
@@ -972,7 +255,8 @@
       <workItem from="1665210610472" duration="5620000" />
       <workItem from="1665300157726" duration="23000" />
       <workItem from="1665980937484" duration="59000" />
-      <workItem from="1665981367347" duration="447000" />
+      <workItem from="1665981367347" duration="19932000" />
+      <workItem from="1666327223123" duration="16430000" />
     </task>
     <task id="LOCAL-00001" summary="create pdb file">
       <created>1664711395673</created>
@@ -1030,17 +314,18 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/13_synthesize_new_molecule$.coverage" NAME=" Coverage Results" MODIFIED="1663554568103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/13_make_new_molecule$chemical_synthesis.coverage" NAME="chemical_synthesis Coverage Results" MODIFIED="1662290492642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/molecule_synthesizer/models" />
     <SUITE FILE_PATH="coverage/13_make_new_molecule$data.coverage" NAME="data Coverage Results" MODIFIED="1662206010381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/molecule_synthesizer/models" />
-    <SUITE FILE_PATH="coverage/13_synthesize_new_molecule$test.coverage" NAME="test Coverage Results" MODIFIED="1662884200298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/13_synthesize_new_molecule$pytest_in___test_chemical_synthesis.coverage" NAME="pytest in / test_chemical_synthesis Coverage Results" MODIFIED="1664083939328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/13_synthesize_new_molecule$pytest_in__raw_data.coverage" NAME="pytest in /raw_data Coverage Results" MODIFIED="1666174443660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/13_synthesize_new_molecule$main.coverage" NAME="main Coverage Results" MODIFIED="1664861966987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/13_synthesize_new_molecule$data_processing.coverage" NAME="data_processing Coverage Results" MODIFIED="1663415413574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/molecule_synthesizer/models" />
+    <SUITE FILE_PATH="coverage/13_make_new_molecule$.coverage" NAME=" Coverage Results" MODIFIED="1662290294039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/13_synthesize_new_molecule$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1664085634948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/13_synthesize_new_molecule$.coverage" NAME=" Coverage Results" MODIFIED="1663554568103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/13_make_new_molecule$chemical_synthesis.coverage" NAME="chemical_synthesis Coverage Results" MODIFIED="1662290492642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/molecule_synthesizer/models" />
+    <SUITE FILE_PATH="coverage/13_synthesize_new_molecule$test.coverage" NAME="test Coverage Results" MODIFIED="1662884200298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/13_synthesize_new_molecule$pytest_in___test_chemical_synthesis.coverage" NAME="pytest in / test_chemical_synthesis Coverage Results" MODIFIED="1664083939328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/13_synthesize_new_molecule$chemical_synthesis.coverage" NAME="chemical_synthesis Coverage Results" MODIFIED="1663984015290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/molecule_synthesizer/models" />
     <SUITE FILE_PATH="coverage/13_synthesize_new_molecule$data.coverage" NAME="data Coverage Results" MODIFIED="1662962133199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/molecule_synthesizer/models" />
     <SUITE FILE_PATH="coverage/13_make_new_molecule$Doctests_in_data.coverage" NAME="Doctests in data Coverage Results" MODIFIED="1662205005606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/molecule_synthesizer/models" />
-    <SUITE FILE_PATH="coverage/13_make_new_molecule$.coverage" NAME=" Coverage Results" MODIFIED="1662290294039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/13_synthesize_new_molecule$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1664085634948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

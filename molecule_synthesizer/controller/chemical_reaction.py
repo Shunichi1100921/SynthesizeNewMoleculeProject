@@ -1,49 +1,49 @@
 """Data: atom types, bond, coord, long-bond, free-atom"""
 from molecule_synthesizer.models import chemical_synthesis
-from molecule_synthesizer.models import raw_data
+from molecule_synthesizer.models import fragment_data
 
 
-def load_fragment_data(fragment):
-    fragment_data = {}
-    attypes = raw_data.AttypeData(fragment)
-    bond = raw_data.BondData(fragment)
-    coord = raw_data.CoordData(fragment)
+# def load_fragment_data(fragment):
+#     fragment_data = {}
+#     attypes = raw_data.AttypeData(fragment)
+#     bond = raw_data.BondData(fragment)
+#     coord = raw_data.CoordData(fragment)
+#
+#     fragment_data['name'] = fragment
+#     fragment_data['attypes'] = attypes.load_data()
+#     fragment_data['long_bond'], fragment_data['bond'] = bond.load_data()
+#     fragment_data['coord'] = coord.load_data()
+#     fragment_data['free_atom'] = []
+#     return fragment_data
 
-    fragment_data['name'] = fragment
-    fragment_data['attypes'] = attypes.load_data()
-    fragment_data['long_bond'], fragment_data['bond'] = bond.load_data()
-    fragment_data['coord'] = coord.load_data()
-    fragment_data['free_atom'] = []
-    return fragment_data
 
-
-def remove_hydrogen(fragment_data):
-    """Remove Hydrogen which is seemed to be added.
-    Process:
-        1st: Remove a bond with hydrogen which is long and seemed to be added from bond data.
-        2nd: Remove a hydrogen data from attypes data.
-        3rd: Arrange bond index of bond data.
-        4th: Remove a coord data of removed hydrogen from coord data.
-        5th: Arrange a bond index of free-atom data.
-
-    :param fragment_data: dict: fragment name such as 'F1', 'F2', ..., 'F57'.
-    :return: new_fragment_data(dict): Edited fragment data that shows attypes, bond, long bond, free atom, and coord.
-    """
-    remover = chemical_synthesis.RemoveHydrogen(fragment_data)
-    remover.cut_bond()
-    remover.remove_hydrogen_from_attype()
-    remover.arrange_bond_idx()
-    remover.remove_hydrogen_from_coord()
-    remover.arrange_free_atom_idx()
-    new_fragment_data = {
-        'name': remover.name,
-        'attypes': remover.attypes,
-        'bond': remover.bond,
-        'coord': remover.coord,
-        'long_bond': remover.long_bond_idx,
-        'free_atom': remover.free_atom
-    }
-    return new_fragment_data
+# def remove_hydrogen(fragment_data):
+#     """Remove Hydrogen which is seemed to be added.
+#     Process:
+#         1st: Remove a bond with hydrogen which is long and seemed to be added from bond data.
+#         2nd: Remove a hydrogen data from attypes data.
+#         3rd: Arrange bond index of bond data.
+#         4th: Remove a coord data of removed hydrogen from coord data.
+#         5th: Arrange a bond index of free-atom data.
+#
+#     :param fragment_data: dict: fragment name such as 'F1', 'F2', ..., 'F57'.
+#     :return: new_fragment_data(dict): Edited fragment data that shows attypes, bond, long bond, free atom, and coord.
+#     """
+#     remover = chemical_synthesis.RemoveHydrogen(fragment_data)
+#     remover.cut_bond()
+#     remover.remove_hydrogen_from_attype()
+#     remover.arrange_bond_idx()
+#     remover.remove_hydrogen_from_coord()
+#     remover.arrange_free_atom_idx()
+#     new_fragment_data = {
+#         'name': remover.name,
+#         'attypes': remover.attypes,
+#         'bond': remover.bond,
+#         'coord': remover.coord,
+#         'long_bond': remover.long_bond_idx,
+#         'free_atom': remover.free_atom
+#     }
+#     return new_fragment_data
 
 
 def synthesize_two_fragment(fragment1_data, fragment2_data):

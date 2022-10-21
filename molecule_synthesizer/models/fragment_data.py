@@ -1,6 +1,7 @@
 import datetime
 import os.path
 import pathlib
+from typing import List, Tuple
 
 
 class FragmentDataModel(object):
@@ -17,7 +18,11 @@ class FragmentDataModel(object):
             fragment_type (str) : 'F1', 'F2', 'F3', ...
             new_molecule (bool) : If molecule does already exist, False, otherwise, True.
         Return:
-            data_dir_path: '.../F1', '.../F2', ...
+            if not new_molecule:
+                data_dir_path: '.../F1', '.../F2', ...
+            new_molecule:
+                data_dir_path: '.../new_molecule_
+
         """
 
         base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -67,21 +72,21 @@ class BondData(FragmentDataModel):
         file_path = os.path.join(self.data_dir_path, 'bond.dat')
         return file_path
 
-    def load_data(self):
+    def load_data(self) -> List[List[int]]:
         with open(self.file_path, 'r') as f:
             contents = f.readlines()
         data = [bond.split() for bond in contents]
 
-        # long bondをbondのindexとして保存する
-        long_bond_list = []
-        for i, bond in enumerate(data):
-            if len(bond) >= 3:
-                long_bond_list.append(i)
+        # Don't need long bond because we prepare bind_fragment data.
+        # long_bond_list = []
+        # for i, bond in enumerate(data):
+        #     if len(bond) >= 3:
+        #         long_bond_list.append(i)
 
         # 数字のリストに変換する ex) [['1', '2', '*****'], ['2', '12']] -> [[1, 2], [2, 12]]
         data = [bond[:2] for bond in data]
         data = [list(map(int, bond)) for bond in data]
-        return long_bond_list, data
+        return data
 
 
 class CoordData(FragmentDataModel):
@@ -98,6 +103,20 @@ class CoordData(FragmentDataModel):
         return contents
 
 
+class BindFragmentData(FragmentDataModel):
+
+    def get_file_path(self):
+        file_path = os.path.join(self.data_dir_path, 'bind_fragment.dat')
+        return file_path
+
+    def load_data(self):
+        with open(self.file_path, 'r') as f:
+            contents = f.readlines()
+        contents = [fragment.rstrip(os.linesep) for fragment in contents]
+        contents.insert(0, "")
+        return contents
+
+
 class XYZFile(FragmentDataModel):
     def get_file_path(self):
         frag_num = self.fragment_type[1:]
@@ -110,3 +129,37 @@ class PDBFile(FragmentDataModel):
         frag_type = self.fragment_type
         file_path = os.path.join(self.data_dir_path, f'{frag_type}.pdb')
         return file_path
+
+
+class FragmentClasification():
+
+
+    def get_file_path(self):
+        base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        file_path = os.path.join(base_dir, 'Data', 'fragment_classification.dat')
+        return file_path
+
+    def load_data(self):
+        file_path = self.get_file_path()
+        with open(file_path, 'r') as f:
+            contents = f.read()
+        MODIFIER, BENZOTHIAZOLE, AMIDE, ARYL, ALCOHOL = self.process_data(contents)
+        return MODIFIER, BENZOTHIAZOLE, AMIDE, ARYL, ALCOHOL
+
+    def process_data(self, contents: str):
+        contents = contents.split('#')
+        modifier = contents[1].rstrip(os.linesep).split('\n')[1:]
+        benzothiazole = contents[2].rstrip(os.linesep).split('\n')[1:]
+        amide = contents[3].rstrip(os.linesep).split('\n')[1:]
+        aryl = contents[4].rstrip(os.linesep).split('\n')[1:]
+        alcohol = contents[5].rstrip(os.linesep).split('\n')[1:]
+
+        return modifier, benzothiazole, amide, aryl, alcohol
+
+    def to_list(self, text):
+        return text.rstrip(os.linesep).split('\n')[1:]
+
+
+
+
+

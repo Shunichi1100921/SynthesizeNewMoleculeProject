@@ -1,6 +1,8 @@
 """Chemical reaction edit 'attypes', 'bond', 'coord', and 'free_atom' data."""
-from typing import List
+from typing import List, Tuple, Any
 import numpy as np
+
+from molecule_synthesizer.models.fragment import Fragment
 
 
 class BondError(Exception):
@@ -11,48 +13,43 @@ class LongBondError(Exception):
     pass
 
 
+class NoMutchFragmentError(Exception):
+    pass
+
+
 class RemoveHydrogen:
     """Edit attypes, bond, index of bond, coord, index of free_atom."""
-    def __init__(self, fragment_data):
-        self.fragment_data = fragment_data
-        self.name = fragment_data['name']
-        self.attypes = fragment_data['attypes']
-        self.long_bond_idx = fragment_data['long_bond']
-        self.bond = fragment_data['bond']
-        self.coord = fragment_data['coord']
-        self.free_atom = fragment_data['free_atom']
-        self.bond_to_cut = self.find_bond_to_cut()
-        self.hydrogen_to_remove = self.find_hydrogen_to_remove()
+    def __init__(self, fragment: Fragment):
+        self.fragment = fragment
+        # self.bond_to_cut = self.find_bond_to_cut()
+        # self.hydrogen_to_remove = self.find_hydrogen_to_remove()
 
-    def find_bond_to_cut(self):
+    def find_atom_idx_in_cutting_cite(self, bind_fragment_for_synthesis: str) -> int:
         """Return one bond to cut.
 
         Return:
             bond_to_cut(list): One bond you can cut like, [1, 12],
             which means bond between atom(index=1) and atom(index=12) should be cut.
-        TODO 切断できる箇所が何パターンかあったとき、どこを切断するのか確認する。
         """
+        for i, bind_fragment in enumerate(self.fragment.bind_fragment_data):
+            if bind_fragment == bind_fragment_for_synthesis:
+                return i
+        raise NoMutchFragmentError("This fragment does not have a suitable binding site.")
 
-        bonds = self.bond
-        if not self.long_bond_idx:
-            raise LongBondError('This fragment has no long bond.')
-        bond_to_cut_idx = self.long_bond_idx.pop(0)
+    def find_bond_to_cut(self, atom_idx: int) -> Tuple[Any, Any]:
+        for bond in self.fragment.bond_data:
+            if atom_idx in bond:
+                for atom in bond:
+                    if self.fragment.attypes_data[atom] == 'H':
+                        return (bond, atom)
 
-        return bond_to_cut_idx, bonds[bond_to_cut_idx]
+    # def find_hydrogen_to_remove(self):
+    #     attype_data = self.fragment.attypes_data
+    #
+    #     bond_data = self.fragment.bond_data
 
-    def find_hydrogen_to_remove(self):
-        attype_data = self.attypes
-        bond_idx, bond_to_cut = self.bond_to_cut
 
-        atom1_idx = bond_to_cut[0]
-        atom2_idx = bond_to_cut[1]
 
-        if attype_data[atom1_idx] == 'H':
-            return atom1_idx
-        elif attype_data[atom2_idx] == 'H':
-            return atom2_idx
-        else:
-            raise BondError("\"Remove Hydrogen\" class can only cut bond include hydrogen.")
 
     def cut_bond(self):
         """Choice one bond to cut and remove hydrogen"""
@@ -107,34 +104,12 @@ class RemoveHydrogen:
 
 
 class Synthesis:
-    def __init__(self, fragment1_data, fragment2_data):
-        self.fragment1_data = fragment1_data
-        self.fragment2_data = fragment2_data
+    def __init__(self, fragment1: Fragment, fragment2: Fragment) -> None:
+        self.fragment1 = fragment1
+        self.fragment2 = fragment2
 
-        self.name_f1 = fragment1_data['name']
-        self.attypes_f1 = fragment1_data['attypes']
-        self.long_bond_idx_f1 = fragment1_data['long_bond']
-        self.bond_f1 = fragment1_data['bond']
-        self.coord_f1 = fragment1_data['coord']
-        self.free_atom_f1 = fragment1_data['free_atom']
-
-        self.name_f2 = fragment2_data['name']
-        self.attypes_f2 = fragment2_data['attypes']
-        self.long_bond_idx_f2 = fragment2_data['long_bond']
-        self.bond_f2 = fragment2_data['bond']
-        self.coord_f2 = fragment2_data['coord']
-        self.free_atom_f2 = fragment2_data['free_atom']
-
-        self.new_mol_data = {}
-        self.name_new_mol = ''
-        self.attypes_new_mol = []
-        self.long_bond_idx_new_mol = []
-        self.bond_new_mol = []
-        self.coord_new_mol = []
-        self.free_atom_new_mol = []
-
-    def synthesize_name(self):
-        self.name_new_mol = f'{self.name_f1}_{self.name_f2}'
+        self.new_mol_name = f'{self.fragment1.name}_{self.fragment2.name}'
+        self.new_mol = Fragment(self.new_mol_name)
 
     def synthesize_attypes(self):
         self.attypes_new_mol = self.attypes_f1 + self.attypes_f2[1:]

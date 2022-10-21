@@ -1,6 +1,11 @@
 from molecule_synthesizer.controller import chemical_reaction
-from molecule_synthesizer.models import raw_data
+from molecule_synthesizer.models.fragment import Fragment
 from molecule_synthesizer.views import view
+
+
+class LossFragmentError(Exception):
+    pass
+
 
 def synthesize_multiple_molecules() -> None:
     fragments_list = [
@@ -32,6 +37,47 @@ def synthesize_fragment(fragments):
     return new_mol
 
 
+def synthesize_new_mol_for_machine_learning(modifier: str, benzothiazole: str, amide: str,
+                                                aryl: str, alcohol1: str, alcohol2: str) -> Fragment:
+
+    new_mol = Fragment(f'{modifier}_{benzothiazole}_{amide}_{aryl}_{alcohol1}_{alcohol2}')
+
+    modifier = Fragment(modifier)
+    benzothiazole = Fragment(benzothiazole)
+    amide = Fragment(amide)
+    alcohol1 = Fragment(alcohol1)
+    alcohol2 = Fragment(alcohol2)
+    aryl = Fragment(aryl)
+
+    if not benzothiazole or not amide or not aryl:
+        raise LossFragmentError('New molecule all needs Benzothiazole, Amide, and Aryl group.')
+
+    benzothiazole.remove_hydrogen('amide')
+    amide.remove_hydrogen('benzothiazole')
+    new_mol.synthesize(benzothiazole)
+    new_mol.synthesize(amide)
+
+    new_mol.remove_hydrogen('aryl')
+    aryl.remove_hydrogen('amide')
+    new_mol.synthesize(aryl)
+
+    if alcohol1:
+        new_mol.remove_hydrogen('alcohol1')
+        alcohol1.remove_hydrogen('aryl')
+        new_mol.synthesize(alcohol1)
+
+    if alcohol2:
+        new_mol.remove_hydrogen('alcohol2')
+        alcohol2.remove_hydrogen('aryl')
+        new_mol.synthesize(alcohol2)
+
+    if modifier:
+        new_mol.remove_hydrogen('modifier')
+        modifier.remove_hydrogen('benzothiazole')
+        new_mol.synthesize(modifier)
+    return new_mol
+
+
 def create_file(fragment_data):
     # contentの作成
     contents_creator = view.FileContentsCreator(fragment_data)
@@ -42,11 +88,11 @@ def create_file(fragment_data):
     pdb_contents = contents_creator.get_pdb_file_contents()
 
     # Data Modelのインスタンス化の作成
-    attype_model = raw_data.AttypeData(fragment_data['name'], new_molecule=True)
-    bond_model = raw_data.BondData(fragment_data['name'], new_molecule=True)
-    coord_model = raw_data.CoordData(fragment_data['name'], new_molecule=True)
-    xyz_model = raw_data.XYZFile(fragment_data['name'], new_molecule=True)
-    pdb_model = raw_data.PDBFile(fragment_data['name'], new_molecule=True)
+    attype_model = fragment_data.AttypeData(fragment_data['name'], new_molecule=True)
+    bond_model = fragment_data.BondData(fragment_data['name'], new_molecule=True)
+    coord_model = fragment_data.CoordData(fragment_data['name'], new_molecule=True)
+    xyz_model = fragment_data.XYZFile(fragment_data['name'], new_molecule=True)
+    pdb_model = fragment_data.PDBFile(fragment_data['name'], new_molecule=True)
 
     # DataのSave
     attype_model.save_data(attype_contents)
