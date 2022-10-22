@@ -43,7 +43,6 @@ class Fragment(object):
             4th: Remove a coord data of removed hydrogen from coord data.
             5th: Arrange a bond index of free-atom data.
 
-        :param fragment: dict: fragment name such as 'F1', 'F2', ..., 'F57'.
         :return: new_fragment_data(dict): Edited fragment data that shows attypes, bond, long bond, free atom, and coord.
         """
 
