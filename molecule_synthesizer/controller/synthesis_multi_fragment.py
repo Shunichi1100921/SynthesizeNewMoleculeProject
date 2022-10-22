@@ -1,15 +1,16 @@
 from molecule_synthesizer.controller import chemical_reaction
-from molecule_synthesizer.models import raw_data
+from molecule_synthesizer.models import file_data
+from molecule_synthesizer.models.chemical_synthesis import Fragment
 from molecule_synthesizer.views import view
 
 def synthesize_multiple_molecules() -> None:
     fragments_list = [
         ['F1', 'F2'],
-        ['F1', 'F2', 'F10'],
-        ['F3', 'F5', 'F14'],
-        ['F6', 'F13', 'F25'],
-        ['F12', 'F19', 'F32'],
-        ['F15', 'F23', 'F36'],
+        # ['F1', 'F2', 'F10'],
+        # ['F3', 'F5', 'F14'],
+        # ['F6', 'F13', 'F25'],
+        # ['F12', 'F19', 'F32'],
+        # ['F15', 'F23', 'F36'],
     ]
 
     for fragments in fragments_list:
@@ -20,21 +21,23 @@ def synthesize_multiple_molecules() -> None:
 
 def synthesize_fragment(fragments):
     # fragments = input('Input fragment type with space, like "F1 F2 F12"').split()
-    new_mol = chemical_reaction.load_fragment_data(fragments.pop(0))
+    new_mol = Fragment(fragments.pop(0))
+    new_mol.load_data()
 
     while fragments:
-        new_mol_removed_hydrogen = chemical_reaction.remove_hydrogen(new_mol)
-        adding_mol = chemical_reaction.load_fragment_data(fragments.pop(0))
-        adding_mol_removed_hydrogen = chemical_reaction.remove_hydrogen(adding_mol)
-        new_mol = chemical_reaction.synthesize_two_fragment(new_mol_removed_hydrogen, adding_mol_removed_hydrogen)
+        new_mol.remove_hydrogen()
+        adding_mol = Fragment(fragments.pop(0))
+        adding_mol.load_data()
+        adding_mol.remove_hydrogen()
+        new_mol = chemical_reaction.synthesize_two_fragment(new_mol, adding_mol)
 
     create_file(new_mol)
     return new_mol
 
 
-def create_file(fragment_data):
+def create_file(fragment: Fragment) -> None:
     # contentの作成
-    contents_creator = view.FileContentsCreator(fragment_data)
+    contents_creator = view.FileContentsCreator(fragment)
     attype_contents = contents_creator.get_attypes_contents()
     bond_contents = contents_creator.get_bond_contents()
     coord_contents = contents_creator.get_coord_contents()
@@ -42,11 +45,11 @@ def create_file(fragment_data):
     pdb_contents = contents_creator.get_pdb_file_contents()
 
     # Data Modelのインスタンス化の作成
-    attype_model = raw_data.AttypeData(fragment_data['name'], new_molecule=True)
-    bond_model = raw_data.BondData(fragment_data['name'], new_molecule=True)
-    coord_model = raw_data.CoordData(fragment_data['name'], new_molecule=True)
-    xyz_model = raw_data.XYZFile(fragment_data['name'], new_molecule=True)
-    pdb_model = raw_data.PDBFile(fragment_data['name'], new_molecule=True)
+    attype_model = file_data.AttypeData(fragment.name, new_molecule=True)
+    bond_model = file_data.BondData(fragment.name, new_molecule=True)
+    coord_model = file_data.CoordData(fragment.name, new_molecule=True)
+    xyz_model = file_data.XYZFile(fragment.name, new_molecule=True)
+    pdb_model = file_data.PDBFile(fragment.name, new_molecule=True)
 
     # DataのSave
     attype_model.save_data(attype_contents)

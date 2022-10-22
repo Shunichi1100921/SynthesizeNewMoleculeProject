@@ -1,17 +1,14 @@
 import collections
 import os
 from typing import List
-from typing import Optional
+
+from molecule_synthesizer.models.chemical_synthesis import Fragment
 
 
 class FileContentsCreator(object):
     """Create content from dictionary data for storage in a file."""
-    def __init__(self, fragment_data):
-        self.fragment_data = fragment_data
-        self.name = fragment_data['name']
-        self.attypes = fragment_data['attypes']
-        self.coord = fragment_data['coord']
-        self.bond = fragment_data['bond']
+    def __init__(self, fragment: Fragment) -> None:
+        self.fragment = fragment
 
     def get_attypes_contents(self) -> List[str]:
         """
@@ -19,7 +16,7 @@ class FileContentsCreator(object):
                     ex) ['', 'C', 'O', 'H', 'H', 'O', 'C', 'H', 'H']
         :return: Insert a newline code (os.linesep) at the end of each element of the list.
         """
-        attype_data = self.attypes
+        attype_data = self.fragment.attypes
         contents = [f'{attype}{os.linesep}' for attype in attype_data[1:]]
         return contents
 
@@ -31,7 +28,7 @@ class FileContentsCreator(object):
                     ex) ['1 2/n', '1 3/n', '4 6/n', '5 6/n', '5 7/n', '6 8/n', '1 6/n']
         """
 
-        bond_data = self.bond
+        bond_data = self.fragment.bond
         bond_str = self.list_of_list_of_num_to_list_of_str(bond_data)
         contents = [f'{bond}{os.linesep}' for bond in bond_str]
         return contents
@@ -45,15 +42,15 @@ class FileContentsCreator(object):
                     ex) ['-0.4042 -1.0549 -0.7103/n', '0.5434 -1.1772 0.2523/n', '0.2746 -1.4996 1.4339/n']
         """
 
-        coord_data = self.coord
+        coord_data = self.fragment.coord
         coord_str = self.list_of_list_of_num_to_list_of_str(coord_data[1:])
         contents = [f'{coord}{os.linesep}' for coord in coord_str]
         return contents
 
     def get_xyz_file_contents(self) -> List[str]:
-        name = self.name
-        attype_data = self.attypes[1:]
-        coord_data = self.coord
+        name = self.fragment.name
+        attype_data = self.fragment.attypes[1:]
+        coord_data = self.fragment.coord
 
         coord_data = self.list_of_list_of_num_to_list_of_str(coord_data[1:])
         element_num = str(len(attype_data))
@@ -83,8 +80,8 @@ class FileContentsCreator(object):
         return contents
 
     def get_pdb_hetatm_contents(self) -> List[str]:
-        attype = self.attypes
-        coord = self.coord
+        attype = self.fragment.attypes
+        coord = self.fragment.coord
         num_for_each_atom = collections.defaultdict(int)
         contents = []
         for i, atom in enumerate(attype):
@@ -104,8 +101,8 @@ class FileContentsCreator(object):
         return contents
 
     def get_pdb_conect_contents(self) -> List[str]:
-        attype = self.attypes[1:]
-        bonds = self.bond
+        attype = self.fragment.attypes[1:]
+        bonds = self.fragment.bond
         element_num = len(attype)
         contents = []
         for target_atom in range(1, element_num):
@@ -124,10 +121,3 @@ class FileContentsCreator(object):
         for atom in atom_list_connecting_target:
             contents_of_conect_part += f'{" "*(5-len(str(atom)))}{atom}'
         return contents_of_conect_part
-
-
-
-
-
-
-
