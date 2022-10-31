@@ -2,7 +2,7 @@ import collections
 import os
 from typing import List
 
-from molecule_synthesizer.models.chemical_synthesis import Fragment
+from molecule_synthesizer.models.fragment import Fragment
 
 
 class FileContentsCreator(object):

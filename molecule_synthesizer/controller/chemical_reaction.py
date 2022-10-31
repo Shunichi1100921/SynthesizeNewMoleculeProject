@@ -1,6 +1,6 @@
 """Data: atom types, bond, coord, long-bond, free-atom"""
-from molecule_synthesizer.models import chemical_synthesis
-from molecule_synthesizer.models.chemical_synthesis import Fragment
+from molecule_synthesizer.models import fragment
+from molecule_synthesizer.models.fragment import Fragment
 
 
 def synthesize_two_fragment(fragment1: Fragment, fragment2: Fragment) -> Fragment:

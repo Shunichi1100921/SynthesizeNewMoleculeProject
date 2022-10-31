@@ -1,38 +1,64 @@
+from typing import Dict
+
 from molecule_synthesizer.controller import chemical_reaction
 from molecule_synthesizer.models import file_data
-from molecule_synthesizer.models.chemical_synthesis import Fragment
+from molecule_synthesizer.models.fragment import Fragment, Synthesis
 from molecule_synthesizer.views import view
 
-def synthesize_multiple_molecules() -> None:
-    fragments_list = [
-        ['F1', 'F2'],
-        # ['F1', 'F2', 'F10'],
-        # ['F3', 'F5', 'F14'],
-        # ['F6', 'F13', 'F25'],
-        # ['F12', 'F19', 'F32'],
-        # ['F15', 'F23', 'F36'],
-    ]
+# def synthesize_multiple_molecules() -> None:
+#     fragments_list = [
+#         ['F1', 'F2'],
+#         ['F1', 'F2', 'F10'],
+#         ['F3', 'F5', 'F14'],
+#         ['F6', 'F13', 'F25'],
+#         ['F12', 'F19', 'F32'],
+#         ['F15', 'F23', 'F36'],
+    # ]
+    #
+    # for fragments in fragments_list:
+    #     synthesize_fragment(fragments)
+    #
+    # return None
 
-    for fragments in fragments_list:
-        synthesize_fragment(fragments)
 
-    return None
+# def synthesize_fragment(fragments):
+#     fragments = input('Input fragment type with space, like "F1 F2 F12"').split()
+    # new_mol = Fragment(fragments.pop(0))
+    # new_mol.load_data()
+    #
+    # while fragments:
+    #     new_mol.remove_hydrogen()
+    #     adding_mol = Fragment(fragments.pop(0))
+    #     adding_mol.load_data()
+    #     adding_mol.remove_hydrogen()
+    #     new_mol = chemical_reaction.synthesize_two_fragment(new_mol, adding_mol)
+    #
+    # create_file(new_mol)
+    # return new_mol
 
 
-def synthesize_fragment(fragments):
-    # fragments = input('Input fragment type with space, like "F1 F2 F12"').split()
-    new_mol = Fragment(fragments.pop(0))
-    new_mol.load_data()
+def synthesize_molecule_for_machine_learning(fragments: Dict[str]) -> None:
+    """
+    ex) fragments = {'benzothiazole': 'F4', 'amide': 'F1', 'aryl': 'F5', 'alcohol1': 'F2', 'alcohol2': 'F25', 'modifier': 'F13'}
+    """
 
-    while fragments:
-        new_mol.remove_hydrogen()
-        adding_mol = Fragment(fragments.pop(0))
-        adding_mol.load_data()
-        adding_mol.remove_hydrogen()
-        new_mol = chemical_reaction.synthesize_two_fragment(new_mol, adding_mol)
+    # Fragmentの生成、removehydrogen、synthesizeまで全部synthesizerが行う
+    # new_moleculeの情報は保存する
+    synthesizer = Synthesis(fragments)
+    synthesizer.synthesize('benzothiazole', 'amide')
+    synthesizer.synthesize('amide', 'aryl')
+    synthesizer.synthesize('aryl', 'alcohol1')
+    synthesizer.synthesize('aryl', 'alcohol2')
+    synthesizer.synthesize('benzothiazole', 'modifier')
+
+    new_mol = synthesizer.new_molecule
 
     create_file(new_mol)
-    return new_mol
+
+
+
+
+
 
 
 def create_file(fragment: Fragment) -> None:
