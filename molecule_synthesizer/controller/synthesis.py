@@ -1,6 +1,5 @@
 from typing import Dict
 
-from molecule_synthesizer.controller import chemical_reaction
 from molecule_synthesizer.models import file_data
 from molecule_synthesizer.models.fragment import Fragment, Synthesis
 from molecule_synthesizer.views import view
@@ -37,9 +36,10 @@ from molecule_synthesizer.views import view
     # return new_mol
 
 
-def synthesize_molecule_for_machine_learning(fragments: Dict[str]) -> None:
+def synthesize_molecule_for_machine_learning(fragments: Dict[str, str]) -> None:
     """
-    ex) fragments = {'benzothiazole': 'F4', 'amide': 'F1', 'aryl': 'F5', 'alcohol1': 'F2', 'alcohol2': 'F25', 'modifier': 'F13'}
+    ex) fragments = {'benzothiazole': 'F4', 'amide': 'F1', 'aryl': 'F5',
+     'alcohol1': 'F2', 'alcohol2': 'F25', 'modifier': 'F13'}
     """
 
     # Fragmentの生成、removehydrogen、synthesizeまで全部synthesizerが行う
@@ -55,11 +55,7 @@ def synthesize_molecule_for_machine_learning(fragments: Dict[str]) -> None:
 
     create_file(new_mol)
 
-
-
-
-
-
+    return None
 
 def create_file(fragment: Fragment) -> None:
     # contentの作成
