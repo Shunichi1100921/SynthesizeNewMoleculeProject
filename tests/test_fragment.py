@@ -1,4 +1,8 @@
+import io
 import sys, os
+
+from molecule_synthesizer.models import fragment
+
 sys.path.append(os.pardir)
 
 import pytest
@@ -63,3 +67,39 @@ class TestRemoveHydrogenTestFragmentAryl(object):
 
     def test_free_atom(self, test_fragment, remove_hydrogen_test_fragment):
         assert test_fragment.free_atom == [2]
+
+# ちょっとテスト考えるだけで大変だから、一旦テストは後回しにしよう。
+# class DummySynthesis:
+#     def __init__(self):
+#         self.benzothiazole = Fragment()
+#
+#
+# class TestSynthesis(object):
+#     @pytest.fixture
+#     def synthesizer(self, monkeypatch) -> Synthesis:
+#         fragments = {'benzothiazole': 'test_benzothiazole',
+#                      'amide': 'test_amide',
+#                      'aryl': 'test_aryl',
+#                      'alcohol1': 'test_alcohol1',
+#                      'alcohol2': 'test_alcohol2',
+#                      'modifier': 'test_modifier'
+#                      }
+#         monkeypatch.setattr(Fragment, '__init__', DummySynthesis.__init__)
+#         synthesizer = fragment.Synthesis(fragments)
+#         return synthesizer
+#
+#     def test_synthesize_benzothiazole_amide(self):
+#         pass
+#
+#     def test_synthesize_attypes(self, synthesizer, monkeypatch):
+#         monkeypatch.setattr(synthesizer.benzothiazole, 'attypes', ['N', 'H'])
+#         monkeypatch.setattr(synthesizer.amide, 'attypes', ['C', 'O', 'H'])
+#         assert synthesizer.new_molecule.attypes == ['N', 'H', 'C', 'O', 'H']
+#
+#     def test_synthesize_bond(self, synthesizer, monkeypatch):
+#         monkeypatch.setattr(synthesizer.benzothiazole, 'bond', [[1, 2], [2, 3], [2, 4]])
+#         monkeypatch.setattr(synthesizer.amide, 'bond', [[1, 2], [1, 3], [2, 3]])
+
+
+
+

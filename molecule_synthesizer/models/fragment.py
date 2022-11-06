@@ -1,4 +1,5 @@
 """Chemical reaction edit 'attypes', 'bond', 'coord', and 'free_atom' data."""
+from collections import defaultdict
 from typing import List, Dict
 import numpy as np
 
@@ -8,16 +9,22 @@ from molecule_synthesizer.models import file_data
 class BondError(Exception):
     pass
 
+
 class LongBondError(Exception):
     pass
+
 
 class BindFragmentError(Exception):
     pass
 
 
+class LossFragmentError(Exception):
+    pass
+
+
 class Fragment(object):
 
-    def __init__(self, name:str = None, new_molecule: bool = False) -> None:
+    def __init__(self, name: str = None, new_molecule: bool = False) -> None:
         self.name = name
 
         self.attypes_obj = file_data.AttypeData(self.name)
@@ -32,10 +39,14 @@ class Fragment(object):
             self.long_bond_idx = []
             self.bond = []
             self.coord = []
-            self.free_atom = []
             self.bind_fragment = []
         else:
             self.load_data()
+
+        self.free_atom = []
+
+    def __len__(self) -> int:
+        return len(self.attypes) - 1
 
     def load_data(self) -> None:
         self.attypes = self.attypes_obj.load_data()
@@ -134,65 +145,212 @@ class RemoveHydrogen(object):
 
 
 class Synthesis:
-    def __init__(self, fragment1: Fragment, fragment2: Fragment) -> None:
-        self.fragment1 = fragment1
-        self.fragment2 = fragment2
+    """
+    Synthesis Step:
+        1st: synthesize attypes
+        2nd: synthesize bond
+            1st: synthesize bond
+            2nd: arrange atom idx of bond
+        3rd: synthesize free atom <- Don't need?
+            1st: synthesize free atom
+            2nd: arrange atom idx of bond
+        4th: synthesize long_bond <- Don't need?
+            1st: synthesize long_bond
+            2nd: arrange bond idx of long_bond
+        5th: synthesize coord
+            1st: find appropriate position
+            2nd: synthesize coord
+        6th: add bond
+            1st: synthesize atom idx of bond
+            2nd: add bond
+            3rd: remove free atom
+        7th: synthesize bind_fragment
+    """
 
-        new_mol_name = f'{fragment1.name}_{fragment2.name}'
-        self.new_molecule = Fragment(new_mol_name)
+    def __init__(self, fragments: Dict[str, str]) -> None:
+
+        self.fragments = []
+
+        # Make fragment object.
+        if 'benzothiazole' not in fragments:
+            raise LossFragmentError('Lack necessary fragment.')
+        else:
+            self.benzothiazole = Fragment(fragments['benzothiazole'])
+            self.fragments.append(self.benzothiazole)
+
+        if 'amide' not in fragments:
+            raise LossFragmentError('Lack necessary fragment.')
+        else:
+            self.amide = Fragment(fragments['amide'])
+            self.fragments.append(self.amide)
+
+        if 'aryl' not in fragments:
+            raise LossFragmentError('Lack necessary fragment.')
+        else:
+            self.aryl = Fragment(fragments['aryl'])
+            self.fragments.append(self.aryl)
+
+        if 'alcohol1' not in fragments and 'alcohol2' in fragments:
+            raise LossFragmentError('Lack necessary fragment.')
+        else:
+            self.alcohol1 = Fragment(fragments['alcohol1'])
+            self.fragments.append(self.alcohol1)
+
+        if 'alcohol2' in fragments:
+            self.alcohol2 = Fragment(fragments['alcohol2'])
+            self.fragments.append(self.alcohol2)
+
+        if 'modifier' in fragments:
+            self.modifier = Fragment(fragments['modifier'])
+            self.fragments.append(self.modifier)
+
+        # make new_molecule object
+        fragments_name_list = [fragment.name for fragment in self.fragments]
+        new_mol_name = "_".join(fragments_name_list)
+        self.new_molecule = Fragment(new_mol_name, new_molecule=True)
 
     def synthesize_attypes(self):
-        self.new_molecule.attypes = self.fragment1.attypes + self.fragment2.attypes[1:]
+        new_attypes = []
+        for fragment in self.fragments:
+            new_attypes.extend(fragment.attypes[1:])
+        new_attypes.insert(0, "")
+        self.new_molecule.attypes = new_attypes
+
+    # def synthesize_attypes(self):
+    #     self.new_molecule.attypes = self.fragment1.attypes + self.fragment2.attypes[1:]
 
     def synthesize_bond(self):
-        fragment1_element_num = len(self.fragment1.attypes) - 1
-        updated_list = []
-        for bond in self.fragment2.bond:
-            updated_list.append([i + fragment1_element_num for i in bond])
-        self.new_molecule.bond = self.fragment1.bond + updated_list
+        new_bonds = []
+        for fragment in self.fragments:
+            if not new_bonds:
+                new_bonds = fragment.bond
+                continue
 
-    def synthesize_free_atom(self):
-        fragment1_element_num = len(self.fragment1.attypes) - 1
-        adding_fragment_free_atom = [i + fragment1_element_num for i in self.fragment2.free_atom]
-        self.new_molecule.free_atom = self.fragment1.free_atom + adding_fragment_free_atom
+            atom_max_idx = max(new_bonds)
+
+            for bond in fragment.bond:
+                new_bond = [i + atom_max_idx for i in bond]
+                new_bonds.append(new_bond)
+
+            adding_bond = self.get_adding_bond(fragment, atom_max_idx)
+            new_bonds.append(adding_bond)
+
+        self.new_molecule.bond = new_bonds
+
+    def get_adding_bond(self, fragment: Fragment, atom_max_idx: int) -> List[List[int]]:
+
+        bonds = defaultdict(list)
+        adding_bond = []
+        for i, bind_fragment in enumerate(fragment.bind_fragment):
+            if bind_fragment:
+                bond_type = sorted([self.get_fragment_type(fragment), bind_fragment])
+                bond_type = tuple(bond_type)
+                new_atom_idx = i + atom_max_idx
+                bonds[bond_type].append(new_atom_idx)
+
+        for bond_to_add in bonds.values():
+            if len(bond_to_add) == 2:
+                adding_bond.append(bond_to_add)
+
+        return adding_bond
 
 
-    def synthesize_long_bond(self):
-        fragment1_bond_num = len(self.fragment1.bond)
-        adding_fragment_long_bond_idx = [i + fragment1_bond_num for i in self.fragment2.long_bond_idx]
-        self.new_molecule.long_bond_idx = self.fragment1.long_bond_idx + adding_fragment_long_bond_idx
+    # def synthesize_bond(self):
+    #     fragment1_element_num = len(self.fragment1.attypes) - 1
+    #     updated_list = []
+    #     for bond in self.fragment2.bond:
+    #         updated_list.append([i + fragment1_element_num for i in bond])
+    #     self.new_molecule.bond = self.fragment1.bond + updated_list
 
+    # def synthesize_free_atom(self):
+    #     fragment1_element_num = len(self.fragment1.attypes) - 1
+    #     adding_fragment_free_atom = [i + fragment1_element_num for i in self.fragment2.free_atom]
+    #     self.new_molecule.free_atom = self.fragment1.free_atom + adding_fragment_free_atom
+
+    # def synthesize_long_bond(self):
+    #     fragment1_bond_num = len(self.fragment1.bond)
+    #     adding_fragment_long_bond_idx = [i + fragment1_bond_num for i in self.fragment2.long_bond_idx]
+    #     self.new_molecule.long_bond_idx = self.fragment1.long_bond_idx + adding_fragment_long_bond_idx
 
     @staticmethod
-    def get_fragment_x_min_max(coord_data: List[List[float]]) -> List[float]:
+    def get_fragment_x_max(coord: List[List[float]]) -> float:
         """
-        Return the maximum and minimum of each of the x, y, z of the box in which the molecule just fits.
-        :return(list): [[x_min, x_max], [y_min, y_max], [z_min, z_max]]
+        Return max x of fragment
         """
-        coord_data = np.array(coord_data[1:])
-        x_min, y_min, z_min = np.min(coord_data, axis=0)
-        x_max, y_max, z_max = np.max(coord_data, axis=0)
-        return [x_min, x_max]
+        coord = np.array(coord[1:])
+        x_max = float(np.max(coord, axis=0)[0])
+        return x_max
 
-    def get_x_diff(self) -> float:
-        f1_max_x = self.get_fragment_x_min_max(self.fragment1.coord)[1]
-        f2_min_x = self.get_fragment_x_min_max(self.fragment2.coord)[0]
-        if f1_max_x < f2_min_x:
-            return 0
+    @staticmethod
+    def get_fragment_x_min(coord: List[List[float]]) -> float:
+        """
+        Return min x of fragment
+        """
+        coord = np.array(coord[1:])
+        x_min = float(np.min(coord, axis=0)[0])
+        return x_min
+
+    def get_x_diff(self, coord1: List[List[float]], coord2: List[List[float]]) -> float:
+        f1_max_x = self.get_fragment_x_max(coord1)
+        f2_min_x = self.get_fragment_x_min(coord2)
         diff = f1_max_x - f2_min_x
         return diff
 
     def synthesize_coord(self):
-        diff = self.get_x_diff()
-        coord_f1 = self.fragment1.coord
+        new_coord = []
 
-        coord_f2 = np.array(self.fragment2.coord[1:])
-        coord_f2 += np.array([diff+1, 0, 0])
-        coord_f2 = list(coord_f2)
-        self.new_molecule.coord = coord_f1 + coord_f2
+        for fragment in self.fragments:
+            if not new_coord:
+                new_coord = fragment.coord
+                continue
+            diff = self.get_x_diff(new_coord, fragment.coord)
+            for coord in fragment.coord:
+                new_position = np.array(coord[1:]) + np.array([diff+1, 0, 0])
+                new_coord.append(new_position)
 
-    def add_bond(self):
-        free_atom_1 = self.new_molecule.free_atom.pop(0)
-        free_atom_2 = self.new_molecule.free_atom.pop(0)
-        new_bond = [free_atom_1, free_atom_2]
-        self.new_molecule.bond.append(new_bond)
+            self.new_molecule.coord = new_coord
+
+    # def synthesize_coord(self):
+    #     diff = self.get_x_diff()
+    #     coord_f1 = self.fragment1.coord
+    #
+    #     coord_f2 = np.array(self.fragment2.coord[1:])
+    #     coord_f2 += np.array([diff + 1, 0, 0])
+    #     coord_f2 = list(coord_f2)
+    #     self.new_molecule.coord = coord_f1 + coord_f2
+
+    def synthesize_bind_fragment(self):
+        new_bind_fragment = []
+        for fragment in self.fragments:
+            new_bind_fragment.extend(fragment.bind_fragment[1:])
+        new_bind_fragment.insert(0, "")
+        self.new_molecule.attypes = new_bind_fragment
+
+    # def add_bond(self):
+    #     benzothiazole_amide = []
+    #     amide_aryl = []
+    #     aryl_alcohol1 = []
+    #     aryl_alcohol2 = []
+    #     benzothiazole_modifier = []
+    #
+    #     fragment_atom_num = 0
+    #     fragment_atom_num_dict = {}
+    #     for fragment in self.fragments:
+    #         fragment_atom_num_dict.update(fragment=fragment_atom_num)
+    #         fragment_atom_num += len(fragment)
+    #
+    #     for fragment in self.fragments:
+
+    def get_fragment_type(self, fragment: Fragment) -> str:
+        if fragment == self.benzothiazole:
+            return 'benzothiazole'
+        if fragment == self.amide:
+            return 'amide'
+        if fragment == self.aryl:
+            return 'aryl'
+        if fragment == self.alcohol1:
+            return 'alcohol1'
+        if fragment == self.alcohol2:
+            return 'alcohol2'
+        if fragment == self.modifier:
+            return 'modifier'
