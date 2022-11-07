@@ -1,6 +1,6 @@
 """Chemical reaction edit 'attypes', 'bond', 'coord', and 'free_atom' data."""
 from collections import defaultdict
-from typing import List, Dict
+from typing import List, Dict, Tuple
 import numpy as np
 
 from molecule_synthesizer.models import file_data
@@ -20,6 +20,10 @@ class BindFragmentError(Exception):
 
 class LossFragmentError(Exception):
     pass
+
+
+Bond = List[int]
+Coord = List[float]
 
 
 class Fragment(object):
@@ -44,9 +48,6 @@ class Fragment(object):
             self.load_data()
 
         self.free_atom = []
-
-    def __len__(self) -> int:
-        return len(self.attypes) - 1
 
     def load_data(self) -> None:
         self.attypes = self.attypes_obj.load_data()
@@ -160,11 +161,11 @@ class Synthesis:
         5th: synthesize coord
             1st: find appropriate position
             2nd: synthesize coord
-        6th: add bond
+        6th: add bond <- synthesize with "synthesize bond"
             1st: synthesize atom idx of bond
             2nd: add bond
             3rd: remove free atom
-        7th: synthesize bind_fragment
+        7th: synthesize bind_fragment <- Don't need?
     """
 
     def __init__(self, fragments: Dict[str, str]) -> None:
@@ -209,6 +210,22 @@ class Synthesis:
         new_mol_name = "_".join(fragments_name_list)
         self.new_molecule = Fragment(new_mol_name, new_molecule=True)
 
+    def remove_hydrogen(self):
+        self.benzothiazole.remove_hydrogen('amide')
+        self.amide.remove_hydrogen('benzothiazole')
+        self.amide.remove_hydrogen('aryl')
+        self.aryl.remove_hydrogen('amide')
+
+        if self.alcohol1 in self.fragments:
+            self.aryl.remove_hydrogen('alcohol1')
+            self.alcohol1.remove_hydrogen('aryl')
+        if self.alcohol2 in self.fragments:
+            self.aryl.remove_hydrogen('alcohol2')
+            self.alcohol2.remove_hydrogen('aryl')
+        if self.modifier in self.fragments:
+            self.modifier.remove_hydrogen('benzothiazole')
+            self.benzothiazole.remove_hydrogen('modifier')
+
     def synthesize_attypes(self):
         new_attypes = []
         for fragment in self.fragments:
@@ -216,44 +233,41 @@ class Synthesis:
         new_attypes.insert(0, "")
         self.new_molecule.attypes = new_attypes
 
-    # def synthesize_attypes(self):
-    #     self.new_molecule.attypes = self.fragment1.attypes + self.fragment2.attypes[1:]
-
     def synthesize_bond(self):
+        """Synthesize all bond data updating atom index and adding bond.
+        """
         new_bonds = []
+        created_bonds = defaultdict(list)
         for fragment in self.fragments:
-            if not new_bonds:
-                new_bonds = fragment.bond
-                continue
+            if new_bonds:
+                atom_max_idx = max(new_bonds)
+            else:
+                atom_max_idx = 0
 
-            atom_max_idx = max(new_bonds)
-
+            # Add existing bonds.
             for bond in fragment.bond:
-                new_bond = [i + atom_max_idx for i in bond]
-                new_bonds.append(new_bond)
+                updated_bond = [i + atom_max_idx for i in bond]
+                new_bonds.append(updated_bond)
 
-            adding_bond = self.get_adding_bond(fragment, atom_max_idx)
-            new_bonds.append(adding_bond)
+            # Update created bond.
+            created_bonds = self.get_created_bond(fragment, atom_max_idx, created_bonds)
+
+        # Add created bond.
+        for bond_to_add in created_bonds.values():
+            if len(bond_to_add) == 2:
+                new_bonds.append(bond_to_add)
 
         self.new_molecule.bond = new_bonds
 
-    def get_adding_bond(self, fragment: Fragment, atom_max_idx: int) -> List[List[int]]:
-
-        bonds = defaultdict(list)
-        adding_bond = []
+    def get_created_bond(self, fragment: Fragment, atom_max_idx: int, created_bonds: dict) -> Dict[Tuple[str], Bond]:
+        fragment_type = self.get_fragment_type(fragment)
         for i, bind_fragment in enumerate(fragment.bind_fragment):
             if bind_fragment:
-                bond_type = sorted([self.get_fragment_type(fragment), bind_fragment])
-                bond_type = tuple(bond_type)
+                bond_fragment_type = sorted([fragment_type, bind_fragment])
+                bond_fragment_type = tuple(bond_fragment_type)
                 new_atom_idx = i + atom_max_idx
-                bonds[bond_type].append(new_atom_idx)
-
-        for bond_to_add in bonds.values():
-            if len(bond_to_add) == 2:
-                adding_bond.append(bond_to_add)
-
-        return adding_bond
-
+                created_bonds[bond_fragment_type].append(new_atom_idx)
+        return created_bonds
 
     # def synthesize_bond(self):
     #     fragment1_element_num = len(self.fragment1.attypes) - 1
