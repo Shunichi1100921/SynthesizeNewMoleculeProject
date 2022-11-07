@@ -88,6 +88,8 @@ class RemoveHydrogen(object):
         for bond_idx in self.fragment.long_bond_idx:
             bond = self.fragment.bond[bond_idx]
             for atom_idx in bond:
+                if atom_idx >= len(self.fragment.bind_fragment):
+                    continue
                 if self.fragment.bind_fragment[atom_idx] == self.bind_fragment:
                     return bond_idx
 
@@ -140,9 +142,6 @@ class RemoveHydrogen(object):
 
         # Remove bond from self.fragment.long_bond_idx.
         self.fragment.long_bond_idx.remove(self.bond_idx_to_remove)
-
-        # Remove hydrogen from self.fragment.bind_fragment.
-        del self.fragment.bind_fragment[remove_atom_idx]
 
 
 class Synthesis:
@@ -240,7 +239,8 @@ class Synthesis:
         created_bonds = defaultdict(list)
         for fragment in self.fragments:
             if new_bonds:
-                atom_max_idx = max(new_bonds)
+                bond = np.array(new_bonds)
+                atom_max_idx = np.max(bond)
             else:
                 atom_max_idx = 0
 
@@ -318,9 +318,10 @@ class Synthesis:
                 new_coord = fragment.coord
                 continue
             diff = self.get_x_diff(new_coord, fragment.coord)
-            for coord in fragment.coord:
-                new_position = np.array(coord[1:]) + np.array([diff+1, 0, 0])
-                new_coord.append(new_position)
+            # for coord in fragment.coord:
+            #     new_position = np.array(coord[1:]) + np.array([diff+1, 0, 0])
+            new_position = np.array(fragment.coord[1:]) + np.array([diff+1, 0, 0])
+            new_coord.extend(new_position)
 
             self.new_molecule.coord = new_coord
 

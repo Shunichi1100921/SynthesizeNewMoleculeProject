@@ -1,5 +1,6 @@
 from typing import Dict
 
+import settings
 from molecule_synthesizer.models import file_data
 from molecule_synthesizer.models.fragment import Fragment, Synthesis
 from molecule_synthesizer.views import view
@@ -36,11 +37,12 @@ from molecule_synthesizer.views import view
 #     return new_mol
 
 
-def synthesize_molecule_for_machine_learning(fragments: Dict[str, str]) -> None:
+def synthesize_molecule_for_machine_learning() -> None:
     """
     ex) fragments = {'benzothiazole': 'F4', 'amide': 'F1', 'aryl': 'F5',
      'alcohol1': 'F2', 'alcohol2': 'F25', 'modifier': 'F13'}
     """
+    fragments = settings.fragments
     # Fragmentの生成、removehydrogen、synthesizeまで全部synthesizerが行う
     # new_moleculeの情報は保存する
     synthesizer = Synthesis(fragments)

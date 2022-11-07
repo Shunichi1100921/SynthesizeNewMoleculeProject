@@ -107,6 +107,8 @@ class BindFragment(FragmentDataModel):
         with open(self.file_path, 'r') as f:
             contents = f.readlines()
 
+        contents = [item.rstrip(os.linesep) for item in contents]
+        contents = [item.lower() for item in contents]
         contents.insert(0, '')
         return contents
 
