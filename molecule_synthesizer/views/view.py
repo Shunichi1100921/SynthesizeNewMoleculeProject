@@ -89,14 +89,13 @@ class FileContentsCreator(object):
                 continue
             num_for_each_atom[atom] += 1
             atom_index = num_for_each_atom[atom]
+            atom_atom_idx = f'{atom}{atom_index}'
             coord_of_this_atom = coord[i]
             coord_of_this_atom = [round(i, 3) for i in coord_of_this_atom]
 
-            contents_coord_part = f'{" "*(8-len(str(coord_of_this_atom[0])))}{coord_of_this_atom[0]}' \
-                         f'{" "*(8-len(str(coord_of_this_atom[1])))}{coord_of_this_atom[1]}' \
-                         f'{" "*(8-len(str(coord_of_this_atom[2])))}{coord_of_this_atom[2]}'
-            contents_line = f'HETATM{" "*(5-len(str(i)))}{i} {atom}{atom_index}{" "*(17-len(str(atom_index)))}' \
-                            f'{contents_coord_part}  1.00  0.00{" "*11}{atom}\n'
+            contents_line = f'HETATM{i:>5} {atom_atom_idx:<3}{coord_of_this_atom[0]:>23}' \
+                            f'{coord_of_this_atom[1]:>8}{coord_of_this_atom[2]:>8}  1.00 0.00{atom:>12}\n'
+
             contents.append(contents_line)
         return contents
 
@@ -117,7 +116,7 @@ class FileContentsCreator(object):
             if target_atom in bond:
                 atom_list_connecting_target_include_target += bond
         atom_list_connecting_target = [i for i in atom_list_connecting_target_include_target if not i == target_atom]
-        contents_of_conect_part = f'{" "*(5-len(str(target_atom)))}{target_atom}'
+        contents_of_conect_part = f'{target_atom:>5}'
         for atom in atom_list_connecting_target:
-            contents_of_conect_part += f'{" "*(5-len(str(atom)))}{atom}'
+            contents_of_conect_part += f'{atom:>5}'
         return contents_of_conect_part

@@ -5,37 +5,6 @@ from molecule_synthesizer.models import file_data
 from molecule_synthesizer.models.fragment import Fragment, Synthesis
 from molecule_synthesizer.views import view
 
-# def synthesize_multiple_molecules() -> None:
-#     fragments_list = [
-#         ['F1', 'F2'],
-#         ['F1', 'F2', 'F10'],
-#         ['F3', 'F5', 'F14'],
-#         ['F6', 'F13', 'F25'],
-#         ['F12', 'F19', 'F32'],
-#         ['F15', 'F23', 'F36'],
-#     ]
-#
-#     for fragments in fragments_list:
-#         synthesize_fragment(fragments)
-#
-#     return None
-
-
-# def synthesize_fragment(fragments):
-#     fragments = input('Input fragment type with space, like "F1 F2 F12"').split()
-#     new_mol = Fragment(fragments.pop(0))
-#     new_mol.load_data()
-#
-#     while fragments:
-#         new_mol.remove_hydrogen()
-#         adding_mol = Fragment(fragments.pop(0))
-#         adding_mol.load_data()
-#         adding_mol.remove_hydrogen()
-#         new_mol = chemical_reaction.synthesize_two_fragment(new_mol, adding_mol)
-#
-#     create_file(new_mol)
-#     return new_mol
-
 
 def synthesize_molecule_for_machine_learning() -> None:
     """
