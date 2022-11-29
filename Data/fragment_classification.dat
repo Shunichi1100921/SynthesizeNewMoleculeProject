@@ -1,51 +1,47 @@
 # Modifier
 F3
-F6
+F7
 F12
 F13
 F14
+F16
 F17
 F21
 F22
-F24
 F29
+F30
 F31
 F33
-F36
 F38
-F40
 F42
 F43
+F46
+F48
 F50
 
 # Benzothiazole
 F4
 F15
-F49
-F53
+F57
 
 # Amide
 F1
-F7
+F6
 F8
-F16
 F18
 F19
 F20
 F23
+F24
 F28
-F34
+F36
 F39
-F46
-F48
-F52
+F45
 
 # Aryl
 F5
-F10
-F26
-F44
-F49
+F55
+F56
 
 # Alcohol/Amine
 F2
@@ -54,11 +50,19 @@ F11
 F18
 F25
 F27
-F30
 F32
 F35
 F37
-F45
+F40
 F47
 F51
 
+# Others
+F10
+F26
+F34
+F44
+F49
+F52
+F53
+F54
