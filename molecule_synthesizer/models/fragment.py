@@ -269,23 +269,6 @@ class Synthesis:
                 created_bonds[bond_fragment_type].append(new_atom_idx)
         return created_bonds
 
-    # def synthesize_bond(self):
-    #     fragment1_element_num = len(self.fragment1.attypes) - 1
-    #     updated_list = []
-    #     for bond in self.fragment2.bond:
-    #         updated_list.append([i + fragment1_element_num for i in bond])
-    #     self.new_molecule.bond = self.fragment1.bond + updated_list
-
-    # def synthesize_free_atom(self):
-    #     fragment1_element_num = len(self.fragment1.attypes) - 1
-    #     adding_fragment_free_atom = [i + fragment1_element_num for i in self.fragment2.free_atom]
-    #     self.new_molecule.free_atom = self.fragment1.free_atom + adding_fragment_free_atom
-
-    # def synthesize_long_bond(self):
-    #     fragment1_bond_num = len(self.fragment1.bond)
-    #     adding_fragment_long_bond_idx = [i + fragment1_bond_num for i in self.fragment2.long_bond_idx]
-    #     self.new_molecule.long_bond_idx = self.fragment1.long_bond_idx + adding_fragment_long_bond_idx
-
     @staticmethod
     def get_fragment_x_max(coord: List[List[float]]) -> float:
         """
@@ -325,36 +308,12 @@ class Synthesis:
 
             self.new_molecule.coord = new_coord
 
-    # def synthesize_coord(self):
-    #     diff = self.get_x_diff()
-    #     coord_f1 = self.fragment1.coord
-    #
-    #     coord_f2 = np.array(self.fragment2.coord[1:])
-    #     coord_f2 += np.array([diff + 1, 0, 0])
-    #     coord_f2 = list(coord_f2)
-    #     self.new_molecule.coord = coord_f1 + coord_f2
-
     def synthesize_bind_fragment(self):
         new_bind_fragment = []
         for fragment in self.fragments:
             new_bind_fragment.extend(fragment.bind_fragment[1:])
         new_bind_fragment.insert(0, "")
         self.new_molecule.attypes = new_bind_fragment
-
-    # def add_bond(self):
-    #     benzothiazole_amide = []
-    #     amide_aryl = []
-    #     aryl_alcohol1 = []
-    #     aryl_alcohol2 = []
-    #     benzothiazole_modifier = []
-    #
-    #     fragment_atom_num = 0
-    #     fragment_atom_num_dict = {}
-    #     for fragment in self.fragments:
-    #         fragment_atom_num_dict.update(fragment=fragment_atom_num)
-    #         fragment_atom_num += len(fragment)
-    #
-    #     for fragment in self.fragments:
 
     def get_fragment_type(self, fragment: Fragment) -> str:
         if fragment == self.benzothiazole:
