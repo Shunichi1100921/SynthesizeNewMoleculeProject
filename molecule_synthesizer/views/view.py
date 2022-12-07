@@ -1,6 +1,8 @@
+from __future__ import annotations
+
+from typing import List
 import collections
 import os
-from typing import List
 
 from molecule_synthesizer.models.fragment import Fragment
 
@@ -94,7 +96,7 @@ class FileContentsCreator(object):
             coord_of_this_atom = [round(i, 3) for i in coord_of_this_atom]
 
             contents_line = f'HETATM{i:>5} {atom_atom_idx:<3}{coord_of_this_atom[0]:>23}' \
-                            f'{coord_of_this_atom[1]:>8}{coord_of_this_atom[2]:>8}  1.00 0.00{atom:>12}\n'
+                            f'{coord_of_this_atom[1]:>8}{coord_of_this_atom[2]:>8}  1.00 0.00{" "*11}{atom:<2}\n'
 
             contents.append(contents_line)
         return contents
@@ -120,3 +122,7 @@ class FileContentsCreator(object):
         for atom in atom_list_connecting_target:
             contents_of_conect_part += f'{atom:>5}'
         return contents_of_conect_part
+
+    def get_fragid_contents(self) -> list[str]:
+        contents = [f'{i+1:<4}{fragid}\n' for i, fragid in enumerate(self.fragment.fragid)]
+        return contents

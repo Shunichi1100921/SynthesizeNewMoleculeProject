@@ -48,6 +48,7 @@ class Fragment(object):
             self.load_data()
 
         self.free_atom = []
+        self.fragid = []
 
     def load_data(self) -> None:
         self.attypes = self.attypes_obj.load_data()
@@ -93,7 +94,7 @@ class RemoveHydrogen(object):
                 if self.fragment.bind_fragment[atom_idx] == self.bind_fragment:
                     return bond_idx
 
-        raise BindFragmentError("There is not appropriate fragment.")
+        raise BindFragmentError(f"There is not appropriate fragment.  Fragments are {self.fragment.name}")
 
     def find_atom_idx_by_attype(self) -> Dict[str, int]:
         """Look at the atoms of the bond to be cut and return hydrogen or bind_fragment.
@@ -168,41 +169,55 @@ class Synthesis:
     """
 
     def __init__(self, fragments: Dict[str, str]) -> None:
-
+        """Create Fragment dataset.
+        Args:
+            fragments: Dictionary of fragment part and fragment name.
+                ex)  {'benzothiazole': 'F4', 'amide': 'F1', 'aryl': 'F5',
+                'alcohol1': 'F2', 'alcohol2': 'F25', 'modifier': 'F13'}
+        """
         self.fragments = []
 
         # Make fragment object.
-        if 'benzothiazole' not in fragments:
+
+        if fragments['modifier']:
+            self.modifier = Fragment(fragments['modifier'])
+            self.fragments.append(self.modifier)
+        else:
+            self.modifier = None
+
+        if not fragments['benzothiazole']:
             raise LossFragmentError('Lack necessary fragment.')
         else:
             self.benzothiazole = Fragment(fragments['benzothiazole'])
             self.fragments.append(self.benzothiazole)
 
-        if 'amide' not in fragments:
+        if not fragments['amide']:
             raise LossFragmentError('Lack necessary fragment.')
         else:
             self.amide = Fragment(fragments['amide'])
             self.fragments.append(self.amide)
 
-        if 'aryl' not in fragments:
+        if not fragments['aryl']:
             raise LossFragmentError('Lack necessary fragment.')
         else:
             self.aryl = Fragment(fragments['aryl'])
             self.fragments.append(self.aryl)
 
-        if 'alcohol1' not in fragments and 'alcohol2' in fragments:
-            raise LossFragmentError('Lack necessary fragment.')
+        if not fragments['alcohol1']:
+            if fragments['alcohol2']:
+                raise LossFragmentError('Lack necessary fragment.')
+            else:
+                self.alcohol1 = None
         else:
             self.alcohol1 = Fragment(fragments['alcohol1'])
             self.fragments.append(self.alcohol1)
 
-        if 'alcohol2' in fragments:
+        if fragments['alcohol2']:
             self.alcohol2 = Fragment(fragments['alcohol2'])
             self.fragments.append(self.alcohol2)
+        else:
+            self.alcohol2 = None
 
-        if 'modifier' in fragments:
-            self.modifier = Fragment(fragments['modifier'])
-            self.fragments.append(self.modifier)
 
         # make new_molecule object
         fragments_name_list = [fragment.name for fragment in self.fragments]
@@ -215,15 +230,27 @@ class Synthesis:
         self.amide.remove_hydrogen('aryl')
         self.aryl.remove_hydrogen('amide')
 
-        if self.alcohol1 in self.fragments:
+        if self.alcohol1:
             self.aryl.remove_hydrogen('alcohol1')
             self.alcohol1.remove_hydrogen('aryl')
-        if self.alcohol2 in self.fragments:
+        if self.alcohol2:
             self.aryl.remove_hydrogen('alcohol2')
             self.alcohol2.remove_hydrogen('aryl')
-        if self.modifier in self.fragments:
+        if self.modifier:
             self.modifier.remove_hydrogen('benzothiazole')
             self.benzothiazole.remove_hydrogen('modifier')
+
+    def calculate_fragid(self):
+        """Count the number of atoms in each fragment.
+        Notes: It should be performed AFTER THE REMOVE_HYDROGEN METHOD EXECUTED
+         since it is the number of atoms after removing hydrogen that is important.
+        """
+        fragid = []
+        for fragment in self.fragments:
+            atom_num_of_fragment = len(fragment.attypes) - 1
+            for i in range(atom_num_of_fragment):
+                fragid.append(fragment.name)
+        self.new_molecule.fragid = fragid
 
     def synthesize_attypes(self):
         new_attypes = []

@@ -1,6 +1,10 @@
+from __future__ import annotations
+
 import datetime
 import os.path
 import pathlib
+
+import settings
 
 
 class FragmentDataModel(object):
@@ -104,8 +108,14 @@ class BindFragment(FragmentDataModel):
         return file_path
 
     def load_data(self):
-        with open(self.file_path, 'r') as f:
-            contents = f.readlines()
+        try:
+            with open(self.file_path, 'r') as f:
+                contents = f.readlines()
+        except FileNotFoundError:
+            raise FileNotFoundError(f'There is not bind_fragment.dat file in {self.fragment_type}\n'
+                                    f'The file was created manually, so there may be omissions.'
+                                    f'Please create bind_fragment.dat file in {self.fragment_type}')
+
 
         contents = [item.rstrip(os.linesep) for item in contents]
         contents = [item.lower() for item in contents]
@@ -125,3 +135,78 @@ class PDBFile(FragmentDataModel):
         frag_type = self.fragment_type
         file_path = os.path.join(self.data_dir_path, f'{frag_type}.pdb')
         return file_path
+
+
+class Fragid(FragmentDataModel):
+    def get_file_path(self):
+        file_path = os.path.join(self.data_dir_path, 'fragid.dat')
+        return file_path
+
+
+class FragmentSet(object):
+    @classmethod
+    def load_data(cls) -> list[dict[str, str | None]]:
+        """Load Fragment sets
+        Returns:
+            fragment_sets(list): A list of dictionary that create one new molecule.
+        """
+        fragment_sets = []
+        if settings.All_Fragment:
+            fragments = cls.load_all_fragments()
+        else:
+            fragments = {
+                'benzothiazole': settings.benzothiazole,
+                'amide': settings.amide,
+                'aryl': settings.aryl,
+                'alcohol1': settings.alcohol1,
+                'alcohol2': settings.alcohol2,
+                'modifier': settings.modifier
+                         }
+            for k, v in fragments.items():
+                if not type(v) == list:
+                    fragments[k] = [v]
+
+        for benzothiazole in fragments['benzothiazole']:
+            for amide in fragments['amide']:
+                for aryl in fragments['aryl']:
+                    for alcohol1 in fragments['alcohol1']:
+                        for alcohol2 in fragments['alcohol2']:
+                            for modifier in fragments['modifier']:
+                                if aryl == 'F55' or aryl == 'F56':
+                                    alcohol1, alcohol2 = None, None
+                                if benzothiazole == 'F15' or benzothiazole == 'F57':
+                                    modifier = None
+                                if alcohol1 == None:
+                                    alcohol2 = None
+                                fragment_set = {
+                                    'benzothiazole': benzothiazole,
+                                    'amide': amide,
+                                    'aryl': aryl,
+                                    'alcohol1': alcohol1,
+                                    'alcohol2': alcohol2,
+                                    'modifier': modifier,
+                                }
+                                fragment_sets.append(fragment_set)
+
+        return fragment_sets
+
+
+    @classmethod
+    def load_all_fragments(cls) -> dict[str, list[str | None]]:
+        base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        file_path = os.path.join(base_dir, 'Data', 'fragment_classification.dat')
+        fragments = {}
+        with open(file_path, 'r') as f:
+            contents = f.read()
+
+        contents = contents.split('#')
+        contents = [l.rstrip(os.linesep).split('\n') for l in contents]
+        for l in contents:
+            fragments.update({l[0].lower().lstrip(): l})
+        fragments.update({'alcohol1': fragments['alcohol'], 'alcohol2': fragments['alcohol']})
+
+        fragments['alcohol1'].append(None)
+        fragments['alcohol2'].append(None)
+        fragments['modifier'].append(None)
+
+        return fragments
