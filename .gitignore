@@ -131,6 +131,7 @@ dmypy.json
 # Others
 .DS_Store
 .idea/
+.run/
 
 # Compassed file
 *.zip
