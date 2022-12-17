@@ -1,4 +1,3 @@
-import settings
 from molecule_synthesizer.models import file_data
 from molecule_synthesizer.models.fragment import Fragment, Synthesis
 from molecule_synthesizer.views import view

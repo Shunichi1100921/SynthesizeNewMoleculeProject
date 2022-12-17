@@ -202,7 +202,7 @@ class FragmentSet(object):
         contents = contents.split('#')
         contents = [l.rstrip(os.linesep).split('\n') for l in contents]
         for l in contents:
-            fragments.update({l[0].lower().lstrip(): l})
+            fragments.update({l[0].lower().lstrip(): l[1:]})
         fragments.update({'alcohol1': fragments['alcohol'], 'alcohol2': fragments['alcohol']})
 
         fragments['alcohol1'].append(None)
