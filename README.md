@@ -41,12 +41,12 @@ All_Fragment = False
 
 # Set up a fragment for each part.
 # Refer to README.md for the setting method.
-benzothiazole = F4
-amide = F1
-aryl = F5
-alcohol1 = F11
-alcohol2 = F25
-modifier = F14
+benzothiazole = 'F4'
+amide = 'F1'
+aryl = 'F5'
+alcohol1 = 'F11'
+alcohol2 = 'F25'
+modifier = 'F14'
 ```
 Alcohol and modifier can also be assigned hydrogen. 
 
@@ -58,9 +58,9 @@ All_Fragment = False
 
 # Set up a fragment for each part.
 # Refer to README.md for the setting method.
-benzothiazole = F4
-amide = F1
-aryl = F5
+benzothiazole = 'F4'
+amide = 'F1'
+aryl = 'F5'
 alcohol1 = None
 alcohol2 = None
 modifier = None
@@ -76,13 +76,21 @@ All_Fragment = False
 
 # Set up a fragment for each part.
 # Refer to README.md for the setting method.
-benzothiazole = [F4, F15]
-amide = [F1, F36]
-aryl = F5
-alcohol1 = F2
-alcohol2 = [None, F2]
-modifier = [None, F12]
+benzothiazole = ['F4', 'F15']
+amide = ['F1', 'F36']
+aryl = 'F5'
+alcohol1 = 'F2'
+alcohol2 = [None, 'F2']
+modifier = [None, 'F12']
 ```
 Which group each fragment belongs to is described in fragment_classification.dat.
 A description of each group is provided in fragment_classification.md.
 Please refer to them when setting up fragments for synthesizing.
+
+If you want to synthesize molecules using all possible fragments, set All_Fragment = True.  
+This process is very time-consuming.
+```python:settings.py
+# True if you want to create all possible molecules.
+# This calculation is very time-consuming.
+All_Fragment = True
+```
