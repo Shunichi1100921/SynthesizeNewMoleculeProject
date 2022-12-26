@@ -87,7 +87,7 @@ Which group each fragment belongs to is described in fragment_classification.dat
 A description of each group is provided in fragment_classification.md.
 Please refer to them when setting up fragments for synthesizing.
 
-If you want to synthesize molecules using all possible fragments, set All_Fragment = True.  
+If you want to synthesize molecules using all possible fragments, set All_Fragment True.  
 This process is very time-consuming.
 ```python:settings.py
 # True if you want to create all possible molecules.
