@@ -7,21 +7,21 @@ Installation
 
 1. Clone the repository
     ```bash
-    $ git clone https://github.com/Shunichi1100921/SynthesizeNewMoleculeProject.git MoleculeSynthesizer
+    git clone https://github.com/Shunichi1100921/SynthesizeNewMoleculeProject.git MoleculeSynthesizer
     ```
 
 2. Install the required packages for using.
     #### Anaconda
     ```bash
-    $ cd MoleculeSynthesizer
-    $ conda create --name mol_env --file requirements.txt
-    $ conda activate mol_env
+    cd MoleculeSynthesizer
+    conda create --name mol_env --file requirements.txt
+    conda activate mol_env
     ```
 
     #### Pip
     ```bash
-    $ cd MoleculeSynthesizer
-    $ pip install -r requirements.txt
+    cd MoleculeSynthesizer
+    pip install -r requirements.txt
     ```
 
 Usage
