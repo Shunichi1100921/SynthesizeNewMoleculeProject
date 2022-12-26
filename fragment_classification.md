@@ -23,3 +23,7 @@ Aryl groups are benzene or similar, like thiophene or  pyridine.
 ## Alcohol group
 Alcohol are alcohol or bioisoster of them, like amine.
 
+## Others
+Molecules that were not considered to belong to any of these groups above are classified as Others. 
+If necessary, you can use these fragments after create binding.dat and edit fragment_classification.dat.
+
