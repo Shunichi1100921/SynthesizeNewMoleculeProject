@@ -26,6 +26,8 @@ Installation
 
 Usage
 ---
+
+### Setup
 Molecular information is set in settings.py.
 For example, when synthesizing molecules with the following molecule set, the contents of settings.py is as follows.
 - benzothiazole: F4
@@ -93,4 +95,9 @@ This process is very time-consuming.
 # True if you want to create all possible molecules.
 # This calculation is very time-consuming.
 All_Fragment = True
+```
+
+### Synthesize
+```bash
+python __main__.py
 ```
