@@ -1,4 +1,6 @@
 """Chemical reaction edit 'attypes', 'bond', 'coord', and 'free_atom' data."""
+from __future__ import annotations
+
 from collections import defaultdict
 from typing import List, Dict, Tuple
 import numpy as np
@@ -27,6 +29,7 @@ Coord = List[float]
 
 
 class Fragment(object):
+    """Each fragment is treated as a unit of this class."""
 
     def __init__(self, name: str = None, new_molecule: bool = False) -> None:
         self.name = name
@@ -51,19 +54,23 @@ class Fragment(object):
         self.fragid = []
 
     def load_data(self) -> None:
+        """Load preprocessed data."""
         self.attypes = self.attypes_obj.load_data()
         self.long_bond_idx, self.bond = self.bond_obj.load_data()
         self.coord = self.coord_obj.load_data()
         self.bind_fragment = self.bind_fragment_obj.load_data()
 
     def remove_hydrogen(self, bind_fragment: str) -> None:
-        """Remove Hydrogen which is seemed to be added.
+        """Remove Hydrogen which for binding another bond.
         Process:
             1st: Remove a bond with hydrogen which is long and seemed to be added from bond data.
             2nd: Remove a hydrogen data from attypes data.
             3rd: Arrange bond index of bond data.
             4th: Remove a coord data of removed hydrogen from coord data.
             5th: Arrange a bond index of free-atom data.
+
+        Args:
+            bind_fragment (str): Fragment type the fragment will bind with.
 
         """
 
@@ -72,6 +79,7 @@ class Fragment(object):
 
 
 class RemoveHydrogen(object):
+    """Removing hydrogen process Fragment object data."""
 
     def __init__(self, fragment: Fragment, bind_fragment: str) -> None:
         self.fragment = fragment
@@ -83,7 +91,9 @@ class RemoveHydrogen(object):
         """Return one bond to cut.
 
         Return:
-            bond idx to remove.
+            bond_idx: The index of bond to remove in bonds list .
+        Raises:
+            BindFragmentError: Raise this error when the fragment don't have appropriate bind_fragment data.
         """
 
         for bond_idx in self.fragment.long_bond_idx:
@@ -96,10 +106,12 @@ class RemoveHydrogen(object):
 
         raise BindFragmentError(f"There is not appropriate fragment.  Fragments are {self.fragment.name}")
 
-    def find_atom_idx_by_attype(self) -> Dict[str, int]:
-        """Look at the atoms of the bond to be cut and return hydrogen or bind_fragment.
-        Return: {'hydrogen': atom_idx, 'bind_fragment': atom_idx}
-            ex) {'hydrogen': 2, 'benzothiazole': 10}
+    def find_atom_idx_by_attype(self) -> dict[str, int]:
+        """Returns which of the bonds to remove is hydrogen and will bind with 'bind_fragment'.
+        Return:
+            attype_in_bond (dict): Returns a dictionary with key as hydrogen and {bind_fragment},
+            i.e., {'hydrogen': atom_idx, {bind_fragment}: atom_idx}
+                ex) {'hydrogen': 2, 'benzothiazole': 10}
         """
         attype_in_bond = {}
         for atom_idx in self.fragment.bond[self.bond_idx_to_remove]:
@@ -111,6 +123,9 @@ class RemoveHydrogen(object):
         return attype_in_bond
 
     def remove_bond(self) -> None:
+        """Remove bond and hydrogen and arrange index.
+
+        """
         remove_atom_idx = self.atom_idx_by_attype['hydrogen']
 
         # Remove bond from self.fragment.bond.
@@ -168,7 +183,7 @@ class Synthesis:
         7th: synthesize bind_fragment <- Don't need?
     """
 
-    def __init__(self, fragments: Dict[str, str]) -> None:
+    def __init__(self, fragments: dict[str, str]) -> None:
         """Create Fragment dataset.
         Args:
             fragments: Dictionary of fragment part and fragment name.
@@ -218,13 +233,13 @@ class Synthesis:
         else:
             self.alcohol2 = None
 
-
         # make new_molecule object
         fragments_name_list = [fragment.name for fragment in self.fragments]
         new_mol_name = "_".join(fragments_name_list)
         self.new_molecule = Fragment(new_mol_name, new_molecule=True)
 
-    def remove_hydrogen(self):
+    def remove_hydrogen(self) -> None:
+        """Call remove_hydrogen method of fragment object with appropriate args."""
         self.benzothiazole.remove_hydrogen('amide')
         self.amide.remove_hydrogen('benzothiazole')
         self.amide.remove_hydrogen('aryl')
@@ -240,9 +255,9 @@ class Synthesis:
             self.modifier.remove_hydrogen('benzothiazole')
             self.benzothiazole.remove_hydrogen('modifier')
 
-    def calculate_fragid(self):
+    def calculate_fragid(self) -> None:
         """Count the number of atoms in each fragment.
-        Notes: It should be performed AFTER THE REMOVE_HYDROGEN METHOD EXECUTED
+        Notes: It should be performed AFTER THE REMOVE_HYDROGEN METHOD EXECUTED,
          since it is the number of atoms after removing hydrogen that is important.
         """
         fragid = []
@@ -252,7 +267,10 @@ class Synthesis:
                 fragid.append(fragment.name)
         self.new_molecule.fragid = fragid
 
-    def synthesize_attypes(self):
+    def synthesize_attypes(self) -> None:
+        """Synthesize attypes extending list.
+        """
+
         new_attypes = []
         for fragment in self.fragments:
             new_attypes.extend(fragment.attypes[1:])
@@ -260,8 +278,10 @@ class Synthesis:
         self.new_molecule.attypes = new_attypes
 
     def synthesize_bond(self):
-        """Synthesize all bond data updating atom index and adding bond.
+        """Synthesize all bond data updating atom index and add new bond.
+        First add the bond that was originally in each fragment, then add the new bond.
         """
+
         new_bonds = []
         created_bonds = defaultdict(list)
         for fragment in self.fragments:
@@ -286,7 +306,20 @@ class Synthesis:
 
         self.new_molecule.bond = new_bonds
 
-    def get_created_bond(self, fragment: Fragment, atom_max_idx: int, created_bonds: dict) -> Dict[Tuple[str], Bond]:
+    def get_created_bond(self, fragment: Fragment, atom_max_idx: int, created_bonds: dict) -> dict[tuple[str], Bond]:
+        """Edit dictionary of bonds created.
+
+        Args:
+            fragment (Fragment): About what fragment.
+            atom_max_idx (int): Maximum index value of atoms to which bonds have already been added.
+            Use this value for calculating new atom index of atom of new bond.
+            created_bonds (dict): Key are Fragment types and value is the index of each atom.
+
+        Returns:
+            created_bond: Refer to args.
+
+        """
+
         fragment_type = self.get_fragment_type(fragment)
         for i, bind_fragment in enumerate(fragment.bind_fragment):
             if bind_fragment:
@@ -298,8 +331,14 @@ class Synthesis:
 
     @staticmethod
     def get_fragment_x_max(coord: List[List[float]]) -> float:
-        """
-        Return max x of fragment
+        """Return max x value of the fragment.
+
+        Args:
+            coord: Positional data of atom.
+
+        Returns:
+            x_max: Max x-value of the fragment.
+
         """
         coord = np.array(coord[1:])
         x_max = float(np.max(coord, axis=0)[0])
@@ -307,20 +346,39 @@ class Synthesis:
 
     @staticmethod
     def get_fragment_x_min(coord: List[List[float]]) -> float:
-        """
-        Return min x of fragment
+        """Return min x value of the fragment.
+
+        Args:
+            coord: Positional data of atom.
+
+        Returns:
+            x_min: min x-value of the fragment.
+
         """
         coord = np.array(coord[1:])
         x_min = float(np.min(coord, axis=0)[0])
         return x_min
 
     def get_x_diff(self, coord1: List[List[float]], coord2: List[List[float]]) -> float:
+        """Calculate the distance of the x-coordinate of atoms.
+
+        Args:
+            coord1: The positional data of one atom.
+            coord2: The positional data of the other atom.
+
+        Returns:
+            diff (float): The distance of the x-cooridnate of atoms.
+
+        """
         f1_max_x = self.get_fragment_x_max(coord1)
         f2_min_x = self.get_fragment_x_min(coord2)
         diff = f1_max_x - f2_min_x
         return diff
 
-    def synthesize_coord(self):
+    def synthesize_coord(self) -> None:
+        """Synthesize coord data in order not to overlap each atom.
+
+        """
         new_coord = []
 
         for fragment in self.fragments:
@@ -335,7 +393,10 @@ class Synthesis:
 
             self.new_molecule.coord = new_coord
 
-    def synthesize_bind_fragment(self):
+    def synthesize_bind_fragment(self) -> None:
+        """Synthesize bind_fragment data arranging atom index.
+
+        """
         new_bind_fragment = []
         for fragment in self.fragments:
             new_bind_fragment.extend(fragment.bind_fragment[1:])
@@ -343,6 +404,14 @@ class Synthesis:
         self.new_molecule.attypes = new_bind_fragment
 
     def get_fragment_type(self, fragment: Fragment) -> str:
+        """Utility function for getting fragment type name as strings.
+
+        Args:
+            fragment(Fragment): Fragment object
+
+        Returns:
+            fragment_type(str): Fragment type in a new molecule.
+        """
         if fragment == self.benzothiazole:
             return 'benzothiazole'
         if fragment == self.amide:

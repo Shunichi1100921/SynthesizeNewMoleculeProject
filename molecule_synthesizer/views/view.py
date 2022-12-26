@@ -1,6 +1,6 @@
+"""Create file contents."""
 from __future__ import annotations
 
-from typing import List
 import collections
 import os
 
@@ -12,22 +12,24 @@ class FileContentsCreator(object):
     def __init__(self, fragment: Fragment) -> None:
         self.fragment = fragment
 
-    def get_attypes_contents(self) -> List[str]:
-        """
-        :param attype_data: List of attypes, the beginning of the list is blank.
-                    ex) ['', 'C', 'O', 'H', 'H', 'O', 'C', 'H', 'H']
-        :return: Insert a newline code (os.linesep) at the end of each element of the list.
+    def get_attypes_contents(self) -> list[str]:
+        """Remove elements for index alignment and insert line a newline code at the end of each element of the list.
+
+        Returns:
+            contents (list): Contents list for 'attypes.dat' file.
+
         """
         attype_data = self.fragment.attypes
         contents = [f'{attype}{os.linesep}' for attype in attype_data[1:]]
         return contents
 
-    def get_bond_contents(self) -> List[str]:
-        """
-        :param bond_data: List of bond list of atom num.
-                    ex) [[1, 2], [1, 3], [4, 6], [5, 6], [5, 7], [6, 8], [1, 6]]
-        :return: The atoms of each bond's are joined by a space, and a newline code is inserted at the end of each bond.
-                    ex) ['1 2/n', '1 3/n', '4 6/n', '5 6/n', '5 7/n', '6 8/n', '1 6/n']
+    def get_bond_contents(self) -> list[str]:
+        """Change type int to type strings, separate the index of the atoms in each bond with a space,
+        and insert a newline code at the end of each element of the list.
+
+        Return:
+             contents (list): Contents list for 'bond.dat' file.
+
         """
 
         bond_data = self.fragment.bond
@@ -35,13 +37,13 @@ class FileContentsCreator(object):
         contents = [f'{bond}{os.linesep}' for bond in bond_str]
         return contents
 
-    def get_coord_contents(self) -> List[str]:
-        """
-        :param coord_data: List of coord list of position on x, y, and z axes, the beginning of the list is blank.
-                    ex) [[], [-0.4042, -1.0549, -0.7103], [0.5434, -1.1772, 0.2523], [0.2746, -1.4996, 1.4339]]
+    def get_coord_contents(self) -> list[str]:
+        """Separate x-coordinate, y-coordinate, and z-coordinate with a space
+        and insert a newline code at the end of each element of the list.
 
-        :return: The atoms of each bond's are joined by a space, and a newline code is inserted at the end of each bond.
-                    ex) ['-0.4042 -1.0549 -0.7103/n', '0.5434 -1.1772 0.2523/n', '0.2746 -1.4996 1.4339/n']
+        Return:
+            contents (list): Contents list for 'coord.dat' file.
+
         """
 
         coord_data = self.fragment.coord
@@ -49,7 +51,14 @@ class FileContentsCreator(object):
         contents = [f'{coord}{os.linesep}' for coord in coord_str]
         return contents
 
-    def get_xyz_file_contents(self) -> List[str]:
+    def get_xyz_file_contents(self) -> list[str]:
+        """The first two elements of the list are the number of atoms and the name of the molecule,
+        followed by the atom type and the position of the atom, separated by spaces.
+
+        Returns:
+            contents (list): Contents list for '{molecule_name}.xyz' file.
+
+        """
         name = self.fragment.name
         attype_data = self.fragment.attypes[1:]
         coord_data = self.fragment.coord
@@ -64,16 +73,27 @@ class FileContentsCreator(object):
 
         return contents
 
-    def list_of_list_of_num_to_list_of_str(self, data) -> List[str]:
-        """
+    def list_of_list_of_num_to_list_of_str(self, data: list[list[int]]) -> list[str]:
+        """Utility function for change type of element of the list.
+
         ex) [[1, 2], [3, 4]] -> ['1 2', '3 4'], [[1.23, -2.13], [2,19, -12,4]] -> ['1.23 -2.13', '2,19 -12,4']
-        :param data: List of list of int/float.
-        :return: List of str.
+
+        Args:
+            data: List of list of int/float.
+        Return:
+             List of str.
         """
         data_str = [list(map(str, l)) for l in data]
         return [' '.join(element) for element in data_str]
 
-    def get_pdb_file_contents(self) -> List[str]:
+    def get_pdb_file_contents(self) -> list[str]:
+        """Get pdb contents by dividing into two parts: HETATM, which is the part that represents the information of
+        each atom, and CONECT, which represents the information of bindings.
+
+        Returns:
+            content (list): Contents for '{molecule_name}.pdb' file.
+
+        """
         hetatm = self.get_pdb_hetatm_contents()
         conect = self.get_pdb_conect_contents()
         contents = hetatm + conect
@@ -81,7 +101,13 @@ class FileContentsCreator(object):
         contents.insert(0, 'COMPND\nCOMPND\n')
         return contents
 
-    def get_pdb_hetatm_contents(self) -> List[str]:
+    def get_pdb_hetatm_contents(self) -> list[str]:
+        """Get "HETATM" contents.  It contains atom type and position.
+
+        Returns:
+            contents (list): HETATM part of pdb file.
+
+        """
         attype = self.fragment.attypes
         coord = self.fragment.coord
         num_for_each_atom = collections.defaultdict(int)
@@ -101,18 +127,33 @@ class FileContentsCreator(object):
             contents.append(contents_line)
         return contents
 
-    def get_pdb_conect_contents(self) -> List[str]:
+    def get_pdb_conect_contents(self) -> list[str]:
+        """Get "CONECT" contents.  It shows the atom index which each atom bind to.
+
+        Returns:
+            contents (list): "CONECT" part of pdb file.
+
+        """
         attype = self.fragment.attypes[1:]
-        bonds = self.fragment.bond
         element_num = len(attype)
         contents = []
         for target_atom in range(1, element_num):
-            data = self.create_pdb_conect_data(target_atom, bonds)
+            data = self.create_pdb_conect_data(target_atom)
             contents_line = f'CONECT{data}\n'
             contents.append(contents_line)
         return contents
 
-    def create_pdb_conect_data(self, target_atom: int, bonds: List[List[int]]) -> str:
+    def create_pdb_conect_data(self, target_atom: int) -> str:
+        """Return a string containing the indexes of the atoms bounded to the target atom.
+
+        Args:
+            target_atom (int): The index of the target atom.
+
+        Returns:
+            contents_of_conect_part (str): A string the index of the bonded atoms written in every four letters.
+
+        """
+        bonds = self.fragment.bond
         atom_list_connecting_target_include_target = []
         for bond in bonds:
             if target_atom in bond:
@@ -124,5 +165,11 @@ class FileContentsCreator(object):
         return contents_of_conect_part
 
     def get_fragid_contents(self) -> list[str]:
+        """Get fragid contents.  It shows that which fragment each fragment is derived from.
+
+        Returns:
+            contents (list): Each string containing atom index and fragment type.
+
+        """
         contents = [f'{i+1:<4}{fragid}\n' for i, fragid in enumerate(self.fragment.fragid)]
         return contents
