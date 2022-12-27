@@ -90,7 +90,7 @@ A description of each group is provided in fragment_classification.md.
 Please refer to them when setting up fragments for synthesizing.
 
 If you want to synthesize molecules using all possible fragments, set All_Fragment True.  
-This process is very time-consuming.
+This process is very time-consuming.  It synthesizes nearly 2 million molecules. 
 ```python:settings.py
 # True if you want to create all possible molecules.
 # This calculation is very time-consuming.
