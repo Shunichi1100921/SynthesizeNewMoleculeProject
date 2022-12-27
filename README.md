@@ -98,6 +98,7 @@ All_Fragment = True
 ```
 
 ### Synthesize
+Run the main script.
 ```bash
 python __main__.py
 ```
