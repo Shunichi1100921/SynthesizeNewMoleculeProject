@@ -1,6 +1,7 @@
 """Chemical reaction edit 'attypes', 'bond', 'coord', and 'free_atom' data."""
 from __future__ import annotations
 
+
 from collections import defaultdict
 from typing import List, Dict, Tuple
 import numpy as np

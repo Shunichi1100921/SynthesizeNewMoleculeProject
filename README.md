@@ -5,6 +5,20 @@ This program is created for iCeMS Cardiomyocyte Machine Learning Project.
 Installation
 -
 
+You should have your computer installed anaconda or miniconda, or python.
+Anaconda is the package of python that make you possible to create virtual environments, install other libraries.
+If you have your computer installed anaconda, the libraries for statistics or machine learning will be installed.
+Miniconda is small size package.  The packages will not be installed.
+If you are interested in learning more about machine learning, I recommend installing anaconda.
+If your computer does not have enough space, install miniconda.
+If you install from the official Python installation, you will need to use pip to install the necessary libraries. 
+It probably won't be a problem, but since I developed using anaconda, it may cause problems.
+
+### Distributions
+- Anaconda: https://www.anaconda.com/products/distribution
+- Miniconda: https://docs.conda.io/en/latest/miniconda.html
+- Python: https://www.python.org
+
 1. Clone the repository
     ```bash
     git clone https://github.com/Shunichi1100921/SynthesizeNewMoleculeProject.git MoleculeSynthesizer
