@@ -28,20 +28,24 @@ It probably won't be a problem, but since I developed using anaconda, it may cau
     #### Anaconda
     ```bash
     cd MoleculeSynthesizer
-    conda create --name mol_env --file requirements.txt
+    conda create --name mol_env python=3.8 numpy
     conda activate mol_env
     ```
 
     #### Pip
     ```bash
     cd MoleculeSynthesizer
-    pip install -r requirements.txt
+    pip install numpy
     ```
 
 Usage
 ---
 
 ### Setup
+```bash
+vi settings.py
+```
+
 Molecular information is set in settings.py.
 For example, when synthesizing molecules with the following molecule set, the contents of settings.py is as follows.
 - benzothiazole: F4
