@@ -115,7 +115,7 @@ This process is very time-consuming.  It synthesizes nearly 2 million molecules.
 All_Fragment = True
 ```
 
-### Synthesize
+### Run synthesize program
 Run the main script.
 ```bash
 python __main__.py
